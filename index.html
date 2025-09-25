@@ -6,50 +6,152 @@
     <title> Tuğçe Pınarbaş - Game Developer Portfolio </title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #1a1a1a;;
-            color: #f4f4f4;
-        }
-        h1 {
-            color: #5bc0de; /* Oyun temasına uygun kırmızı ton */
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #2d2d30;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .project {
-            border-left: 5px solid #5cb85c;
-            padding-left: 15px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Hi, I am Tuğçe Pınarbaş!</h1>
-        <h2>Game Developer Portfolio</h2>
+            <style>
+    /* Temel Ayarlar */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1a1a1a; /* Koyu Tema Arka Plan */
+        color: #f4f4f4;
+        text-align: center;
+        scroll-behavior: smooth; /* Sayfa içi geçişleri yumuşatır */
+    }
+    
+    /* Navigasyon (Menü) */
+    nav {
+        position: fixed; /* Menüyü yukarıya sabitler */
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Hafif şeffaf siyah */
+        padding: 15px 0;
+        z-index: 1000;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li a {
+        color: #f4f4f4;
+        text-decoration: none;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav ul li a:hover {
+        color: #5bc0de; /* Vurgu Rengi */
+    }
 
-        <p>
-            Oyun geliştirme tutkunu biriyim. Özellikle Unity ile geliştirdiğim projeler ve üzerinde çalıştığım konseptler hakkında daha fazla bilgi edinebilirsiniz.
-        </p>
+    /* Karşılama Ekranı (Hero Section) */
+    .hero-section {
+        height: 100vh; /* Sayfanın tamamını kaplar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ARKA PLAN RESMİ */
+        background-image: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Oyun+Gorseli'); 
+        /* Yukarıdaki linki kendi oyun görselinizin linkiyle değiştirin! */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+    }
+    /* Koyu Kaplama (Görseli daha okunur yapar) */
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6); 
+    }
+    .hero-content {
+        position: relative;
+        z-index: 5;
+        color: white;
+    }
+    .hero-content h1 {
+        font-size: 3.5em;
+        margin-bottom: 0.1em;
+        color: #5bc0de;
+    }
+    .hero-content p {
+        font-size: 1.5em;
+        margin-top: 0;
+        opacity: 0.8;
+    }
 
-        <hr>
+    /* Butonlar */
+    .btn {
+        display: inline-block;
+        padding: 10px 25px;
+        margin: 10px;
+        text-decoration: none;
+        border: 2px solid #5bc0de;
+        color: #5bc0de;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+        background-color: #5bc0de;
+        color: #1a1a1a;
+    }
 
-        <h3>Projelerim</h3>
-        
-        <div class="project">
-            <h4>Proje Adı 1 (LABYRINTH 3D)</h4>
-            <p>
-                Bu proje, [KULLANILAN MOTOR:Unity /DİL: C#] ile geliştirilmiş bir 3D labirent oyunudur. Mekanikler, oynanış süresi ve aldığım sorumluluklar (örneğin: yapay zeka/oyun fiziği) buraya yazılacak.
-            </p>
-            <p><strong>Link:</strong> <a href="[OYUNUN İNDİRME/OYNAMA LİNKİ]" target="_blank">Oyunu İncele</a></p>
+    /* Projeler Bölümü */
+    .project-list {
+        padding: 60px 20px;
+        min-height: 50vh;
+    }
+    .project-list h2 {
+        font-size: 2.5em;
+        color: #5bc0de;
+        margin-bottom: 40px;
+    }
+    .project-link {
+        color: #5bc0de;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+</style>
+       <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">ANA SAYFA</a></li>
+            <li><a href="about.html">HAKKIMDA (ABOUT ME)</a></li>
+            <li><a href="index.html#projects">PROJELER</a></li>
+            <li><a href="contact.html">İLETİŞİM</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Merhaba, Ben Tuğçe Pınarbaş</h1>
+            <p>Oyun Geliştiricisi / Gameplay Programmer</p>
+            
+            <div class="button-group">
+                <a href="#projects" class="btn">PROJELERİM</a>
+                <a href="about.html" class="btn">HAKKIMDA</a>
+            </div>
         </div>
+    </header>
 
+    <section id="projects" class="project-list">
+        <h2>Öne Çıkan Projeler</h2>
+        <div class="project-item">
+            <h3>Platform Oyunu Adı</h3>
+            <p>Unity ile geliştirdiğim 2D platform oyunu. Fizik ve yapay zeka sistemlerinden sorumluyum.</p>
+            <a href="[OYUN LİNKİ]" target="_blank" class="project-link">Oyna / İncele</a>
+        </div>
+         <hr>
+    </section>
+</body>
         
         <hr>
 
