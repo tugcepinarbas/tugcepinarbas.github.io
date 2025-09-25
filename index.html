@@ -47,18 +47,18 @@
 
     /* Karşılama Ekranı (Hero Section) */
     .hero-section {
-        height: 100vh; /* Sayfanın tamamını kaplar */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* ARKA PLAN RESMİ */
-        background-image: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Oyun+Gorseli'); 
-        /* Yukarıdaki linki kendi oyun görselinizin linkiyle değiştirin! */
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
-    }
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    /* BURAYI EKLEYİN VEYA KONTROL EDİN */
+    background-color: #000000; /* Hero alanını tam siyah yapar */
+    
+    /* Arka plan resmini göstermiyorsak, aşağıdaki satırı SİLİN veya YORUM SATIRI yapın: */
+    /* background-image: url('...'); */
+}
     /* Koyu Kaplama (Görseli daha okunur yapar) */
     .hero-section::before {
         content: '';
