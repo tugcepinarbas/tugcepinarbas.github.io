@@ -85,22 +85,33 @@
             color: #ff0044; text-shadow: 0 0 7px #ff0044;
         }
 
-        /* Butonlar (Neon Mavi) */
-        .contact-btn {
-            display: inline-flex; /* Simgelerin ve metinlerin ortalanması için */
-            align-items: center; /* Simgeleri ortalar */
-            padding: 12px 10px;
-            /* Tam Daire Şekli İçin %50 Yapıldı */
-            border-radius: 50%; 
-            
-            margin: 10px 5px;
-            text-decoration: none;
-            border: 2px solid #00ffff; 
-            color: #00ffff;         
-            transition: all 0.3s;
-            box-shadow: 0 0 5px #00ffff; 
-
-            /* ANA SAYFA BUTONLARI (Oval Köşeli) */
+       /* SADECE İLETİŞİM İKONLARI (Tam Daire) */
+    .contact-btn {
+        display: inline-flex; 
+        align-items: center; 
+        
+        /* TAM DAİRE İÇİN PAD Puanı (küçük karemsi bir alan yaratır) */
+        padding: 10px 10px; 
+        
+        /* TAM DAİRE ŞEKLİ */
+        border-radius: 50%; 
+        
+        margin: 10px 5px;
+        text-decoration: none;
+        border: 2px solid #00ffff; 
+        color: #00ffff;           
+        transition: all 0.3s;
+        box-shadow: 0 0 5px #00ffff; 
+    }
+    
+    /* İKONLAR ARASI BOŞLUK (Sadece İletişim Butonu İçi) */
+    .contact-btn i {
+        /* Metin olmadığı için boşluk olmamalı, ikon tam ortalanmalı */
+        margin-right: 0; 
+        font-size: 1.1em;
+    } 
+           
+    /* ANA SAYFA BUTONLARI (Oval Köşeli) */
     .btn {
         display: inline-flex; 
         align-items: center; 
@@ -109,7 +120,7 @@
         text-decoration: none;
         border: 2px solid #00ffff;
         
-        /* BU SATIRI GÜNCELLEYİN: Oval Köşeler İçin */
+        /* OVAL KÖŞELER (20px) */
         border-radius: 20px; 
         
         color: #00ffff;           
@@ -117,7 +128,7 @@
         transition: all 0.3s;
         box-shadow: 0 0 5px #00ffff; 
     }
-        }
+        
         .btn:hover, .contact-btn:hover {
             background-color: #00ffff; 
             color: #000000;
