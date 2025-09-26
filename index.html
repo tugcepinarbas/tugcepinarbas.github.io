@@ -15,48 +15,34 @@
         body {
             margin: 0;
             font-family: 'Playfair Display', serif; 
-            background-color: #000000; /* Ana SİYAH */
+            background-color: #000000; /* Tam SİYAH */
             color: #f4f4f4; 
             text-align: center;
             scroll-behavior: smooth;
-            overflow-x: hidden; /* Yatay kaydırmayı engeller */
+            overflow-x: hidden;
         }
         
-        /* Tüm Ana Bölümler (Proje/İletişim) */
-        section {
-            padding: 80px 20px;
-            background-color: #000000; /* BEYAZ GÖRÜNEN YERLERİ SİYAH YAPAR */
-            max-width: 1000px; /* İçeriği Ortalamak İçin */
-            margin: 0 auto; /* ORTALAMA İŞLEMİNİ GERÇEKLEŞTİRİR */
-            text-align: center; /* İçerik ortalı olsun */
-        }
-        
-        /* Proje Başlıkları ve Metinleri Ortalanır */
-        #projects h2, #projects h3, #projects p {
-             text-align: center; 
-        }
-
         /* Navigasyon (Menü) */
         nav {
             position: fixed; top: 0; width: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px 5px; 
+            padding: 15px 25px; 
             z-index: 1000;
             display: flex;
             justify-content: space-between; 
             align-items: center;
         }
         
-        /* Logo Stili (Adınız) */
+        /* Logo Stili (İstenildiği Gibi: Beyaz ve Normal Boyut) */
         .logo a {
             color: #ffffff; 
             text-shadow: none; 
             text-decoration: none;
-            font-size: 1.2em; 
-            font-weight: normal;
+            font-size: 1.2em; /* Küçültülmüş boyut */
+            font-weight: normal; /* Kalınlık kaldırıldı */
         }
 
-        /* Menü Linkleri (Hover dahil) */
+        /* Menü Linkleri */
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
         nav ul li a {
             color: #f4f4f4; 
@@ -67,78 +53,71 @@
             transition: all 0.3s; 
             display: block; 
         }
+        /* Menü Linkleri HOVER (Antrasit Gri) */
         nav ul li a:hover {
             background-color: #333333; /* Antrasit gri */
             color: #f4f4f4; 
             text-shadow: none; 
         }
 
-        /* Ana Başlık (Ad/Soyad) */
+        /* Karşılama Ekranı (Hero Section) */
         .hero-section {
             height: 100vh; display: flex; justify-content: center; align-items: center; position: relative;
             background-color: #000000; 
         }
         .hero-content h1 {
-            font-size: 2.5em; color: #ffffff; font-family: 'Playfair Display', serif; 
+            font-size: 2.5em; color: #ffffff; 
+            font-family: 'Playfair Display', serif; 
         }
         .hero-content p {
             color: #ff0044; text-shadow: 0 0 7px #ff0044;
         }
-
-       /* SADECE İLETİŞİM İKONLARI (Tam Daire) */
-    .contact-btn {
-        display: inline-flex; 
-        align-items: center; 
         
-        /* TAM DAİRE İÇİN PAD Puanı (küçük karemsi bir alan yaratır) */
-        padding: 10px 10px; 
-        
-        /* TAM DAİRE ŞEKLİ */
-        border-radius: 50%; 
-        
-        margin: 10px 5px;
-        text-decoration: none;
-        border: 2px solid #00ffff; 
-        color: #00ffff;           
-        transition: all 0.3s;
-        box-shadow: 0 0 5px #00ffff; 
-    }
-    
-    /* İKONLAR ARASI BOŞLUK (Sadece İletişim Butonu İçi) */
-    .contact-btn i {
-        /* Metin olmadığı için boşluk olmamalı, ikon tam ortalanmalı */
-        margin-right: 0; 
-        font-size: 1.1em;
-    } 
-           
-    /* ANA SAYFA BUTONLARI (Oval Köşeli) */
-    .btn {
-        display: inline-flex; 
-        align-items: center; 
-        padding: 10px 20px;
-        margin: 10px 5px;
-        text-decoration: none;
-        border: 2px solid #00ffff;
-        
-        /* OVAL KÖŞELER (20px) */
-        border-radius: 20px; 
-        
-        color: #00ffff;           
-        font-weight: bold;
-        transition: all 0.3s;
-        box-shadow: 0 0 5px #00ffff; 
-    }
-        
-        .btn:hover, .contact-btn:hover {
+        /* ANA SAYFA BUTONLARI (Oval Köşeli: PROJECTS, ABOUT ME, CONTACT) */
+        .btn {
+            display: inline-block; 
+            padding: 10px 25px; /* Oval kalması için geniş padding */
+            margin: 10px;
+            text-decoration: none;
+            border: 2px solid #00ffff;
+            border-radius: 20px; /* OVAL KÖŞELER */
+            color: #00ffff;           
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #00ffff;
+        }
+        .btn:hover {
             background-color: #00ffff; 
             color: #000000;
             box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
         }
         
-        /* İKONLAR ARASI BOŞLUK */
-        .contact-btn i {
-            margin-right: 0; /* Metin olmadığı için sağdaki boşluğu kaldırıyoruz */
-            font-size: 1.1em;
+        /* TÜM SECTİON ALANLARI (Proje/İletişim) */
+        section {
+            padding: 80px 20px;
+            background-color: #000000; /* Beyaz kalan alanları siyah yapar */
+            text-align: center; /* İçerik ortalanır */
+        }
+
+        /* İLETİŞİM İKONLARI (Tam Daire: LinkedIn, GitHub, E-posta) */
+        .contact-btn {
+            display: inline-flex; 
+            align-items: center; 
+            
+            padding: 10px 10px; /* Tam daire için eşit padding */
+            border-radius: 50%; /* TAM DAİRE ŞEKLİ */
+            
+            margin: 10px 5px;
+            text-decoration: none;
+            border: 2px solid #00ffff; 
+            color: #00ffff;           
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #00ffff; 
+        }
+        .contact-btn:hover {
+            background-color: #00ffff; 
+            color: #000000;
+            box-shadow: 0 0 10px #00ffff;
         }
         
     </style>
@@ -162,9 +141,9 @@
             <h1>Hi, I am Tuğçe Pınarbaş</h1>
             <p>Game Developer / Artist</p>
             <div class="button-group">
-                <a href="#projects" class="btn">Projects</a>
-                <a href="about.html" class="btn">About me</a>
-                <a href="#contact" class="btn">Contact</a> 
+                <a href="#projects" class="btn">PROJECTS</a>
+                <a href="about.html" class="btn">ABOUT ME</a>
+                <a href="#contact" class="btn">CONTACT</a> 
             </div>
         </div>
     </header>
@@ -190,15 +169,15 @@
             <h2>İLETİŞİME GEÇ</h2>
             <p>Bir proje teklifi veya işbirliği için bana ulaşabilirsiniz.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/tugcepinarbas" target="_blank" class="contact-btn">
+                <a href="https://www.linkedin.com/in/[KULLANICI_ADINIZI_EKLEYİN]" target="_blank" class="contact-btn">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 
-                <a href="https://github.com/tugcepinarbas" target="_blank" class="contact-btn">
+                <a href="https://github.com/[KULLANICI_ADINIZI_EKLEYİN]" target="_blank" class="contact-btn">
                     <i class="fab fa-github"></i>
                 </a>
                 
-                <a href="mailto:tugcepinarbas5@gmail.com" class="contact-btn">
+                <a href="mailto:tugcepin@gmail.com" class="contact-btn">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
