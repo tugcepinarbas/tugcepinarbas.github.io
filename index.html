@@ -86,19 +86,37 @@
         }
 
         /* Butonlar (Neon Mavi) */
-        .btn, .contact-btn {
+        .contact-btn {
             display: inline-flex; /* Simgelerin ve metinlerin ortalanması için */
             align-items: center; /* Simgeleri ortalar */
             padding: 12px 10px;
             /* Tam Daire Şekli İçin %50 Yapıldı */
             border-radius: 50%; 
+            
             margin: 10px 5px;
             text-decoration: none;
             border: 2px solid #00ffff; 
-            color: #00ffff;           
-            font-weight: bold;
+            color: #00ffff;         
             transition: all 0.3s;
             box-shadow: 0 0 5px #00ffff; 
+
+            /* ANA SAYFA BUTONLARI (Oval Köşeli) */
+    .btn {
+        display: inline-flex; 
+        align-items: center; 
+        padding: 10px 20px;
+        margin: 10px 5px;
+        text-decoration: none;
+        border: 2px solid #00ffff;
+        
+        /* BU SATIRI GÜNCELLEYİN: Oval Köşeler İçin */
+        border-radius: 20px; 
+        
+        color: #00ffff;           
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 0 5px #00ffff; 
+    }
         }
         .btn:hover, .contact-btn:hover {
             background-color: #00ffff; 
