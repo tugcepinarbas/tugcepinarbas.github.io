@@ -7,159 +7,157 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
     <title> Tuğçe Pınarbaş - Game Developer Portfolyo </title>
+    
     <style>
-        /* ... TÜM CSS kodunuz burada yer almalı ... */
-    </style>
-</head>
+        /* Temel Ayarlar */
         body {
-           
-    <style>
-    
-        margin: 0;
-        /* BU SATIRI GÜNCELLEYİN */
-        font-family: 'Playfair Display', serif; 
-        
-        background-color: #000000; 
-        color: #f4f4f4;
-        text-align: center;
-        scroll-behavior: smooth;
-    }
-    
-    /* Navigasyon (Menü) */
-    nav {
-        position: fixed; /* Menüyü yukarıya sabitler */
-        top: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.7); /* Hafif şeffaf siyah */
-        padding: 15px 0;
-        z-index: 1000;
-    }
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    nav ul li a {
-        color: #f4f4f4;
-        text-decoration: none;
-        padding: 10px 20px;
-        text-transform: uppercase;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
-    nav ul li a:hover {
-        color: #5bc0de; /* Vurgu Rengi */
-    }
-            
-            /* Logo Stili (Adınız) */
-    .logo a {
-        color: #00ffff; 
-        text-decoration: none;
-        font-size: 1.5em; 
-        
-        /* BU KISIMDA DEĞİŞİKLİK YAPILMALI */
-        font-weight: 800; /* Kalın Punto */
-        text-shadow: 0 0 5px #00ffff, 0 0 10px rgba(0, 255, 255, 0.5); /* Neon parlaklığı */
-    }
+            margin: 0;
+            font-family: 'Playfair Display', serif; /* YUMUŞAK FONT */
+            background-color: #000000; /* TAM SİYAH ARKA PLAN */
+            color: #f4f4f4; /* GENEL YAZI RENGİ (Açık Gri) */
+            text-align: center;
+            scroll-behavior: smooth;
+        }
 
-    /* Karşılama Ekranı (Hero Section) */
-    .hero-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    
-    /* BURAYI EKLEYİN VEYA KONTROL EDİN */
-    background-color: #000000; /* Hero alanını tam siyah yapar */
-    
-    /* Arka plan resmini göstermiyorsak, aşağıdaki satırı SİLİN veya YORUM SATIRI yapın: */
-    /* background-image: url('...'); */
-}
-    /* Koyu Kaplama (Görseli daha okunur yapar) */
-    .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 1,0); 
-    }
-    .hero-content {
-        position: relative;
-        z-index: 5;
-        color: white;
-    }
-     /* Ana Başlık (h1) */
-    .hero-content h1 {
-        font-size: 2.8em;
-        margin-bottom: 0.1em;
-        color: #ffffff; 
+        /* Navigasyon (Menü) */
+        nav {
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 40px; /* Kenardan Boşluk */
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+        }
         
-        /* BU SATIRI EKLEYİN (Yazı tipini h1'e de uygulayın) */
-        font-family: 'Playfair Display', serif; 
-        /* ... diğer stiller ... */
-    }
-    .hero-content p {
-        font-size: 1.5em;
-        margin-top: 0;
-        
-        /* Neon Efekti için 2 Önemli Satır */
-        color: #ff0044; /* Metnin kendi rengi (Parlak Kırmızı) */
-        text-shadow: 0 0 7px #ff0044, 0 0 10px #ff0044, 0 0 21px #ff0044;
-        /* Parlaklık için metin gölgeleri eklendi */
-    }
+        /* Logo Stili (Adınız) */
+        .logo a {
+            color: #00ffff; /* Neon Mavi Renk */
+            text-decoration: none;
+            font-size: 1.5em; 
+            font-weight: 800; /* Kalın Punto */
+            text-shadow: 0 0 5px #00ffff, 0 0 10px rgba(0, 255, 255, 0.5); 
+        }
 
-    /* Butonlar */
-    .btn {
-        display: inline-block;
-        padding: 10px 25px;
-        margin: 10px;
-        text-decoration: none;
-        
-        /* Neon Mavi Renk Tanımı */
-        border: 2px solid #00ffff; /* Çerçeve Rengi */
-        color: #00ffff;           /* Yazı Rengi */
-        
-        border-radius: 20px;
-        font-weight: bold;
-        transition: background-color 0.3s, color 0.3s;
-        
-        /* Neon Efekti için Gölge Ekleme */
-        box-shadow: 0 0 5px #00ffff;
-    }
-    .btn:hover {
-        background-color: #00ffff; /* Üzerine gelince neon mavi zemin */
-        color: #000000;
-        /* Hover durumunda daha parlak bir gölge */
-        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-    }
+        /* Menü Linkleri */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li a {
+            color: #f4f4f4; /* Linkler beyaz/gri */
+            text-decoration: none;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00ffff; /* Üzerine gelince neon mavi */
+            text-shadow: 0 0 5px #00ffff;
+        }
 
-    /* Projeler Bölümü */
-    .project-list {
-        padding: 60px 20px;
-        min-height: 50vh;
-    }
-    .project-list h2 {
-        font-size: 2.5em;
-        color: #5bc0de;
-        margin-bottom: 40px;
-    }
-    .project-link {
-        color: #5bc0de;
-        text-decoration: none;
-        font-weight: bold;
-        display: block;
-        margin-top: 10px;
-    }
-</style>
-       <body>
+        /* Karşılama Ekranı (Hero Section) */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #000000; 
+            overflow: hidden; 
+        }
+        .hero-content {
+            z-index: 2;
+        }
+        
+        /* Ana Başlık (Ad/Soyad) */
+        .hero-content h1 {
+            font-size: 2.5em; /* Daha orantılı boyut */
+            margin-bottom: 0.1em;
+            color: #ffffff; 
+            font-family: 'Playfair Display', serif; 
+        }
+
+        /* Rol Yazısı (Neon Kırmızı) */
+        .hero-content p {
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #ff0044; /* Neon Kırmızı Renk */
+            text-shadow: 0 0 7px #ff0044, 0 0 10px #ff0044, 0 0 21px #ff0044;
+        }
+
+        /* Butonlar (Neon Mavi) */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            margin: 10px;
+            text-decoration: none;
+            border: 2px solid #00ffff; /* Neon Mavi Çerçeve */
+            color: #00ffff;           /* Neon Mavi Yazı */
+            border-radius: 20px; /* Yuvarlak Köşeler */
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #00ffff; /* Neon Gölge */
+            font-family: Arial, sans-serif; /* Buton fontu daha okunaklı olsun */
+        }
+        .btn:hover {
+            background-color: #00ffff; 
+            color: #000000;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+        }
+        
+        /* İletişim Kutusu Stili (SADECE Kutu Çevresi Neon Mavi) */
+        .contact-section {
+            padding: 80px 20px;
+            background-color: #000000; 
+        }
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #0d0d0d;
+            border: 2px solid #00ffff; 
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.4);
+        }
+        .contact-box h2 {
+            color: #00ffff; 
+            text-shadow: 0 0 5px #00ffff;
+        }
+        .contact-box p {
+            color: #f4f4f4; 
+        }
+        .contact-btn {
+            /* .btn stiline benzer, ancak ayrı kontrol edilebilir */
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            text-decoration: none;
+            border: 1px solid #00ffff;
+            color: #00ffff;
+            border-radius: 20px; 
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #00ffff;
+        }
+        .contact-btn:hover {
+            background-color: #00ffff;
+            color: #000000;
+            box-shadow: 0 0 10px #00ffff;
+        }
+        
+    </style>
+    </head>
+
+<body>
     <nav>
         <div class="logo">
-            <a href="index.html">Tuğçe Pınarbaş</a>
+            <a href="index.html">TUĞÇE PINARBAŞ</a>
         </div>
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -173,47 +171,41 @@
         <div class="hero-content">
             <h1>Hi, I am Tuğçe Pınarbaş</h1>
             <p>Game Developer / Artist</p>
-            
-         <div class="button-group">
-                <a href="#projects" class="btn">PROJECTS</a>
-                
-                <a href="about.html" class="btn">ABOUT ME</a>
-                
-                <a href="#contact" class="btn">CONTACT</a> 
+            <div class="button-group">
+                <a href="#projects" class="btn">PROJELERİM</a>
+                <a href="about.html" class="btn">HAKKIMDA</a>
+                <a href="#contact" class="btn">İLETİŞİM (CONTACT)</a> 
             </div>
         </div>
     </header>
 
-    <section id="projects" class="project-list">
+    <section id="projects">
         <h2>Öne Çıkan Projeler</h2>
-        <div class="project-item">
-            <h3>Labyrinth 3D</h3>
-            <p>Unity ile geliştirdiğim 3D labirent oyunu. Fizik ve yapay zeka sistemlerinden sorumluyum.</p>
-            <a href="[OYUN LİNKİ EKLENECEK]" target="_blank" class="project-link">Play / Analyze</a>
-        </div>
-         <hr>
-    </section>
-<section id="contact" class="contact-section">
-        <div class="contact-box">
-            <h2>İLETİŞİM</h2>
-            <p>Bir proje teklifi veya işbirliği için bana ulaşabilirsiniz.</p>
-            <div class="social-links">
-                <a href="[LİNKEDİN ADRESİNİZ]" target="_blank" class="contact-btn">LinkedIn</a>
-                <a href="[GİTHUB HESABINIZ]" target="_blank" class="contact-btn">GitHub</a>
-                <a href="mailto: [E-POSTA ADRESİNİZ]" class="contact-btn">E-posta</a>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Labyrinth 3D</h3>
+                <p>Unity ile geliştirdiğim 3D labirent oyunu. Fizik ve yapay zeka sistemlerinden sorumluyum.</p>
+                <a href="#" class="project-link">Play / Analyze</a>
+            </div>
+            <div class="project-item">
+                <h3>Kısa Proje</h3>
+                <p>Kısa sürede geliştirdiğim bu prototip, yeni bir oyun mekaniğini test etmek için yapıldı.</p>
+                <a href="#" class="project-link">GitHub Repo</a>
             </div>
         </div>
     </section>
-    </body>
-</html>
-    }
-</body>
-        
-        <hr>
 
-        <h3>İletişim</h3>
-        <p>to contact me: <strong>tugcepinarbas5@gmail.com</strong></p>
-        <p><a href="[https://www.linkedin.com/in/tugcepinarbas]" target="_blank">LinkedIn Profilim</a> | <a href="[KİŞİSEL GİTHUB HESABINIZIN LİNKİ]" target="_blank">Tüm GitHub Repolarım</a></p>
-    </div>
+    <section id="contact" class="contact-section">
+        <div class="contact-box">
+            <h2>İLETİŞİME GEÇ</h2>
+            <p>Bir proje teklifi veya işbirliği için bana ulaşabilirsiniz.</p>
+            <div class="social-links">
+                <a href="#" target="_blank" class="contact-btn">LinkedIn</a>
+                <a href="#" target="_blank" class="contact-btn">GitHub</a>
+                <a href="mailto:eposta@ornek.com" class="contact-btn">E-posta</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
