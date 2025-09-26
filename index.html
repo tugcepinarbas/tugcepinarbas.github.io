@@ -11,11 +11,18 @@
     <title> Tuğçe Pınarbaş - Game Developer Portfolyo </title>
     
     <style>
-        /* Temel Ayarlar (Tüm Sayfayı Kapsar) */
+       /* Temel Ayarlar (Tüm Sayfayı Kapsar) */
         body {
             margin: 0;
             font-family: 'Playfair Display', serif; 
-            background-color: #000000; /* Tam SİYAH */
+            
+            /* Siyah arka planı görsel ile değiştiriyoruz */
+            background-color: #000000; /* Görsel yüklenmezse siyah kalır */
+            background-image: url('User Avatar.jpg'); /* !!! KENDİ DOSYA ADINIZLA DEĞİŞTİRİN !!! */
+            background-size: cover; /* Görseli tüm ekranı kaplayacak şekilde ayarlar */
+            background-attachment: fixed; /* Sayfa kaydığında görselin sabit kalmasını sağlar */
+            background-position: center; /* Görseli ortalar */
+            
             color: #f4f4f4; 
             text-align: center;
             scroll-behavior: smooth;
@@ -32,9 +39,7 @@
             justify-content: space-between; 
             align-items: center;
 
-            /* KIRMIZI ŞERİT EFEKTİ İÇİN GÖLGE EKLENDİ */
-            box-shadow: 0 5px 10px-5px0 #ff0044; 
-        }
+            }
         
         /* Logo Stili (Adınız) */
         .logo {
