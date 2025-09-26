@@ -1,0 +1,113 @@
+    
+    <style>
+        /* Temel Ayarlar (Tüm Sayfayı Kapsar) */
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif; 
+            background-color: #000000; /* Tam SİYAH */
+            color: #f4f4f4; 
+            text-align: center;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        /* Navigasyon (Menü) */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 5px; 
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+        }
+        
+        /* Logo Stili (İstenildiği Gibi: Beyaz ve Normal Boyut) */
+        .logo a {
+            color: #ffffff; 
+            text-shadow: none; 
+            text-decoration: none;
+            font-size: 1.2em; /* Küçültülmüş boyut */
+            font-weight: normal; /* Kalınlık kaldırıldı */
+        }
+
+        /* Menü Linkleri */
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul li a {
+            color: #f4f4f4; 
+            text-decoration: none;
+            padding: 10px 5px; 
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s; 
+            display: block; 
+        }
+        /* Menü Linkleri HOVER (Antrasit Gri) */
+        nav ul li a:hover {
+            background-color: #333333; /* Antrasit gri */
+            color: #f4f4f4; 
+            text-shadow: none; 
+        }
+
+        /* Karşılama Ekranı (Hero Section) */
+        .hero-section {
+            height: 100vh; display: flex; justify-content: center; align-items: center; position: relative;
+            background-color: #000000; 
+        }
+        .hero-content h1 {
+            font-size: 2.5em; color: #ffffff; 
+            font-family: 'Playfair Display', serif; 
+        }
+        .hero-content p {
+            color: #ff0044; text-shadow: 0 0 7px #ff0044;
+        }
+        
+        /* ANA SAYFA BUTONLARI (Oval Köşeli: PROJECTS, ABOUT ME, CONTACT) */
+        .btn {
+            display: inline-block; 
+            padding: 10px 25px; /* Oval kalması için geniş padding */
+            margin: 10px;
+            text-decoration: none;
+            border: 2px solid #00ffff;
+            border-radius: 20px; /* OVAL KÖŞELER */
+            color: #00ffff;           
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #00ffff;
+        }
+        .btn:hover {
+            background-color: #00ffff; 
+            color: #000000;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+        }
+        
+        /* TÜM SECTİON ALANLARI (Proje/İletişim) */
+        section {
+            padding: 80px 20px;
+            background-color: #000000; /* Beyaz kalan alanları siyah yapar */
+            text-align: center; /* İçerik ortalanır */
+        }
+
+        /* İLETİŞİM İKONLARI (Tam Daire: LinkedIn, GitHub, E-posta) */
+        .contact-btn {
+            display: inline-flex; 
+            align-items: center; 
+            
+            padding: 10px 10px; /* Tam daire için eşit padding */
+            border-radius: 50%; /* TAM DAİRE ŞEKLİ */
+            
+            margin: 10px 5px;
+            text-decoration: none;
+            border: 2px solid #00ffff; 
+            color: #00ffff;           
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #00ffff; 
+        }
+        .contact-btn:hover {
+            background-color: #00ffff; 
+            color: #000000;
+            box-shadow: 0 0 10px #00ffff;
+        }
+        
+    </style>
+    
