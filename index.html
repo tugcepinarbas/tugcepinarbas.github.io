@@ -90,20 +90,29 @@
     }
 
     /* Butonlar */
+    /* Butonlar */
     .btn {
         display: inline-block;
         padding: 10px 25px;
         margin: 10px;
         text-decoration: none;
-        border: 2px solid #5bc0de;
-        color: #5bc0de;
+        
+        /* Neon Mavi Renk Tanımı */
+        border: 2px solid #00ffff; /* Çerçeve Rengi */
+        color: #00ffff;           /* Yazı Rengi */
+        
         border-radius: 5px;
         font-weight: bold;
         transition: background-color 0.3s, color 0.3s;
+        
+        /* Neon Efekti için Gölge Ekleme */
+        box-shadow: 0 0 5px #00ffff;
     }
     .btn:hover {
-        background-color: #5bc0de;
-        color: #1a1a1a;
+        background-color: #00ffff; /* Üzerine gelince neon mavi zemin */
+        color: #000000;
+        /* Hover durumunda daha parlak bir gölge */
+        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     }
 
     /* Projeler Bölümü */
