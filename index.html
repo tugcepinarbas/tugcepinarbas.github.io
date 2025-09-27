@@ -158,6 +158,43 @@
             color: #000000;
             box-shadow: 0 0 10px #00ffff;
         }
+        /* Proje Kartlarını Yan Yana Dizme */
+        .projects-container {
+            display: flex; /* İçindeki elemanları yan yana dizer */
+            flex-wrap: wrap; /* Ekran sığmazsa alt satıra atar */
+            justify-content: center; /* Kartları ortalar */
+            gap: 40px; /* Kartlar arasındaki boşluğu belirler */
+            margin-top: 40px;
+        }
+
+        /* Tek Bir Proje Kartı Stili */
+        .project-card {
+            width: 300px; /* Kartın sabit genişliği */
+            padding: 20px;
+            text-align: left;
+            border: 1px solid rgba(0, 255, 255, 0.4); /* Neon mavi kenarlık */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.8); /* Yarı saydam arka plan */
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Hafif neon gölge */
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05); /* Mouse gelince kartı büyütür */
+            box-shadow: 0 0 15px #00ffff; /* Daha parlak neon gölge */
+        }
+        
+        .project-card img {
+            width: 100%; /* Görselin kart genişliğinde olmasını sağlar */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .project-card h3 {
+            color: #00ffff; /* Proje başlık rengi */
+            margin-top: 0;
+        }
         
     </style>
     </head>
@@ -189,18 +226,32 @@
 
     <section id="projects">
         <h2>Öne Çıkan Projeler</h2>
-        <div class="project-list">
-            <div class="project-item">
+        
+        <div class="projects-container">
+
+            <div class="project-card">
+                <img src="proje1_gorsel.jpg" alt="Labyrinth 3D Ekran Görüntüsü">
+                
                 <h3>Labyrinth 3D</h3>
-                <p>Unity ile geliştirdiğim 3D labirent oyunu. Fizik ve yapay zeka sistemlerinden sorumluyum.</p>
-                <a href="#" class="project-link">Play / Analyze</a>
+                <p>
+                    Unity ile geliştirdiğim 3D labirent oyunu. 
+                    Karakter hareketlerinden sorumlu fizik motoru ve dinamik yol bulma (A*) algoritmaları benim sorumluluğumdaydı.
+                </p>
+                <a href="PROJE_LİNKİ_VEYA_GITHUB" class="btn contact-btn" style="width: 100%;">GitHub / Demo</a>
             </div>
-            <div class="project-item">
-                <h3>Kısa Proje</h3>
-                <p>Kısa sürede geliştirdiğim bu prototip, yeni bir oyun mekaniğini test etmek için yapıldı.</p>
-                <a href="#" class="project-link">GitHub Repo</a>
+
+            <div class="project-card">
+                <img src="proje2_gorsel.jpg" alt="Kısa Proje Prototip Görüntüsü">
+                
+                <h3>Kısa Proje Prototip</h3>
+                <p>
+                    Kısa sürede geliştirdiğim bu prototip, yeni bir oyun mekaniğini test etmek için yapıldı. 
+                    Mekanik tasarım ve 3D modelleme süreçlerini tek başıma yürüttüm.
+                </p>
+                <a href="PROJE_LİNKİ_VEYA_GITHUB" class="btn contact-btn" style="width: 100%;">GitHub / Demo</a>
             </div>
-        </div>
+
+            </div>
     </section>
 
     <section id="contact" class="contact-section">
