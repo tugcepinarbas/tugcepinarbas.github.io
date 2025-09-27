@@ -198,6 +198,32 @@
             color: #00ffff; /* Proje başlık rengi */
             margin-top: 0;
         }
+        /* Proje Kartı İçindeki Link Kutularının Kapsayıcısı */
+        .project-links {
+            display: flex; /* İçindeki linkleri yan yana dizer */
+            justify-content: space-around; /* Linkler arasına eşit boşluk bırakır */
+            margin-top: 20px; /* Butonların yukarıdan boşluğunu ayarlar */
+        }
+
+        /* Tek Bir Oval Link Kutusu */
+        .project-link-box {
+            background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam arka plan */
+            border: 1px solid #00ffff; /* Neon mavi çerçeve */
+            border-radius: 20px; /* Oval şekil için yuvarlatılmış köşeler */
+            padding: 8px 15px;
+            text-decoration: none;
+            color: #00ffff; /* Neon mavi metin */
+            font-size: 0.9em;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Oval Link Kutusu Hover Efekti */
+        .project-link-box:hover {
+            background-color: #00ffff; /* Üzerine gelince neon mavi dolar */
+            color: #000000; /* Metin rengi siyaha döner */
+            border-color: #00ffff; /* Çerçeve rengi aynı kalır */
+            box-shadow: 0 0 10px #00ffff; /* Hafif parlama */
+        }
         
     </style>
     </head>
@@ -237,9 +263,16 @@
                 
                 <h3>Labyrinth 3D</h3>
                 <p>
+                    
                     Unity ile geliştirdiğim 3D labirent oyunu. 
                     Karakter hareketlerinden sorumlu fizik motoru ve dinamik yol bulma (A*) algoritmaları benim sorumluluğumdaydı.
-                </p>
+               </p> 
+            
+            <div class="project-links">
+                <a href="GİTHUB_PROJE_LİNKİ" target="_blank" class="project-link-box">GitHub</a>
+                <a href="CANLI_DEMO_LİNKİ" target="_blank" class="project-link-box">Demo</a>
+            </div>
+        
                 <a href="PROJE_LİNKİ_VEYA_GITHUB" class="btn contact-btn" style="width: 100%;">GitHub / Demo</a>
             </div>
 
