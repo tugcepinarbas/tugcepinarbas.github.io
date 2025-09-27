@@ -3,289 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuğçe Pınarbaş - Game Developer / Artist Portfolio</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <title> Tuğçe Pınarbaş - Game Developer Portfolyo </title>
-    
     <style>
-       /* Temel Ayarlar (Tüm Sayfayı Kapsar) */
+        /* TEMEL STİLLER - Body ve Arka Plan */
         body {
-            <div class="overlay"></div> 
             margin: 0;
             font-family: 'Playfair Display', serif; 
+            background-color: #000000; 
             
-            /* Siyah arka planı görsel ile değiştiriyoruz */
-            background-color: #000000; /* Görsel yüklenmezse siyah kalır */
-            background-image: url('photo_6.jpeg'); /* !!! KENDİ DOSYA ADINIZLA DEĞİŞTİRİN !!! */
-            background-size: cover; /* Görseli tüm ekranı kaplayacak şekilde ayarlar */
-            background-attachment: fixed; /* Sayfa kaydığında görselin sabit kalmasını sağlar */
-            background-position: center; /* Görseli ortalar */
+            /* ARKA PLAN GÖRSELİ AYARLARI */
+            background-image: url('oyun_ekrani.jpg'); /* !!! Kendi görsel adınızla değiştirin !!! */
+            background-size: cover; 
+            background-attachment: fixed; 
+            background-position: center; 
             
             color: #f4f4f4; 
             text-align: center;
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-        
-        /* Navigasyon (Menü) */
+
+        /* ARKA PLAN GÖRSELİNİ KARARTAN YARI SAYDAM KATMAN */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); 
+            z-index: -99; 
+        }
+
+        /* NAVİGASYON ÇUBUĞU */
         nav {
             position: fixed; top: 0; width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px 40px; 
+            background-color: transparent; /* ŞEFFAF ARKA PLAN */
+            padding: 15px 30px; /* İnce çubuk ve yan boşluk */
             z-index: 1000;
             display: flex;
             justify-content: space-between; 
             align-items: center;
-
-            }
-        
-        /* Logo Stili (Adınız) */
-        .logo {
-            /* SOL LOGOYA EKSTRA SAĞA İTME MARGIN'I EKLEDİK */
-            margin-left: 100px; 
+            
+            /* KIRMIZI ŞERİT EFEKTİ (Neon Gölge) */
+            box-shadow: 0 5px 10px -5px #ff0044; 
         }
 
+        /* LOGO STİLİ */
         .logo a {
             color: #ffffff; 
             text-shadow: none; 
             text-decoration: none;
             font-size: 1.2em; 
             font-weight: normal;
-            
+            /* Sabit zemin kaldırıldı */
         }
 
-        /* Menü Linkleri */
-         /* Menü Linklerini Sola Çekme */
+        /* NAVİGASYON LİNKLERİ */
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
-            
-            /* SAĞDAN İÇERİ ÇEKMEK İÇİN BOŞLUK EKLEDİK */
-            margin-right: 80px; /* Bu değeri deneyerek istediğiniz mesafeyi ayarlayın */
-        }
-        nav ul li a {
-            color: #f4f4f4; 
-            text-decoration: none;
-            padding: 10px 5px; 
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: all 0.3s; 
-            display: block; 
-        }
-        /* Menü Linkleri HOVER (Antrasit Gri) */
-        nav ul li a:hover {
-            background-color: #333333; /* Antrasit gri */
-            color: #f4f4f4; 
-            text-shadow: none; 
+            /* Linkleri sağdan içeri çekme */
+            margin-right: 50px; 
         }
 
-        /* Karşılama Ekranı (Hero Section) */
-        .hero-section {
-            height: 100vh; display: flex; justify-content: center; align-items: center; position: relative;
-           /* YARI SAYDAM SİYAH PERDE OLARAK AYARLANDI */
-            background-color: rgba(0, 0, 0, 0.2); 
+        nav ul li {
+            margin-left: 25px;
         }
-        .hero-content h1 {
-            font-size: 2.5em; color: #ffffff; 
-            font-family: 'Playfair Display', serif; 
-        }
-       /* UNVAN YAZISI: Game Developer / Artist */
-        .hero-content p {
-            /* NEON KIRMIZI AYARLARI */
-            color: #ff0044;
-            text-shadow: 0 0 7px #ff0044, 0 0 15px #ff0044;
-            font-size: 1.2em;
-            
-            /* BU SATIRI KALDIRIN VEYA 'normal' OLARAK DEĞİŞTİRİN */
-            font-weight: normal; /* Eskiden bold idi, şimdi normal yaptık. */
-            
-            /* BOZULMAYI ENGELLEMEK İÇİN EKLENDİ */
-            margin-top: 10px;
-            margin-bottom: 30px;
-        }
-        
-        /* ANA SAYFA BUTONLARI (Oval Köşeli: PROJECTS, ABOUT ME, CONTACT) */
-        .btn {
-            display: inline-block; 
-            padding: 10px 25px; /* Oval kalması için geniş padding */
-            margin: 10px;
+
+        nav ul li a {
+            color: #f4f4f4;
             text-decoration: none;
-            border: 2px solid #00ffff;
-            border-radius: 20px; /* OVAL KÖŞELER */
-            color: #00ffff;           
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 0 5px #00ffff;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            transition: color 0.3s, box-shadow 0.3s;
         }
-        .btn:hover {
-            background-color: #00ffff; 
-            color: #000000;
-            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+
+        nav ul li a:hover {
+            color: #ff0044; /* Neon Kırmızı hover efekti */
+            box-shadow: 0 0 10px #ff0044;
         }
-        
-        /* TÜM SECTİON ALANLARI (Proje/İletişim) */
+
+        /* HERO BÖLÜMÜ (ANA EKRAN) */
+        .hero-section {
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            position: relative;
+            
+            /* YARI SAYDAM SİYAH PERDE */
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 0.1em;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            color: #ff0044; /* Neon Kırmızı */
+            text-shadow: 0 0 10px #ff0044; 
+        }
+
+        /* TÜM İÇERİK SECTİON ALANLARI (Projeler, İletişim) */
         section {
             padding: 80px 20px;
-            background-color: #000000; /* Beyaz kalan alanları siyah yapar */
-             /* YARI SAYDAM SİYAH PERDE OLARAK AYARLANDI */
-            background-color: rgba(0, 0, 0, 0.2); 
             
-            text-align: center; /* İçerik ortalanır */
-        }
-
-        /* İLETİŞİM İKONLARI (Tam Daire: LinkedIn, GitHub, E-posta) */
-        .contact-btn {
-            display: inline-flex; 
-            align-items: center; 
+            /* YARI SAYDAM SİYAH PERDE */
+            background-color: rgba(0, 0, 0, 0.7); 
             
-            padding: 10px 10px; /* Tam daire için eşit padding */
-            border-radius: 50%; /* TAM DAİRE ŞEKLİ */
-            
-            margin: 10px 5px;
-            text-decoration: none;
-            border: 2px solid #00ffff; 
-            color: #00ffff;           
-            transition: all 0.3s;
-            box-shadow: 0 0 5px #00ffff; 
+            text-align: center; 
         }
-        .contact-btn:hover {
-            background-color: #00ffff; 
-            color: #000000;
-            box-shadow: 0 0 10px #00ffff;
+        
+        section h2 {
+            font-size: 2em;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
         }
-        /* Proje Kartlarını Yan Yana Dizme */
+        
+        /* PROJELER BÖLÜMÜ */
         .projects-container {
-            display: flex; /* İçindeki elemanları yan yana dizer */
-            flex-wrap: wrap; /* Ekran sığmazsa alt satıra atar */
-            justify-content: center; /* Kartları ortalar */
-            gap: 40px; /* Kartlar arasındaki boşluğu belirler */
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
             margin-top: 40px;
         }
 
-        /* Tek Bir Proje Kartı Stili */
         .project-card {
-            width: 400px; /* Kartın sabit genişliği */
+            width: 300px; 
             padding: 20px;
             text-align: left;
-            border: 1px solid rgba(0, 255, 255, 0.4); /* Neon mavi kenarlık */
+            border: 1px solid rgba(0, 255, 255, 0.4); 
             border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.8); /* Yarı saydam arka plan */
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Hafif neon gölge */
+            background-color: rgba(0, 0, 0, 0.8); 
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); 
             transition: transform 0.3s;
-            /* KART YÜKSEKLİĞİ AYARI BURADA */
-            height: 350px; /* Denemek için 500 piksel ayarladık. */
-                            
+            height: 500px; /* Sabit yükseklik */
+            overflow-y: auto; 
         }
 
         .project-card:hover {
-            transform: scale(1.05); /* Mouse gelince kartı büyütür */
-            box-shadow: 0 0 15px #00ffff; /* Daha parlak neon mavi gölge */
+            transform: scale(1.05); 
+            box-shadow: 0 0 15px #ff0044; /* Neon Kırmızı Hover */
         }
         
         .project-card img {
-            width: 100%; /* Görselin kart genişliğinde olmasını sağlar */
+            width: 100%; 
             height: auto;
             border-radius: 5px;
             margin-bottom: 15px;
         }
         
         .project-card h3 {
-            color: #00ffff; /* Proje başlık rengi */
+            color: #00ffff; 
             margin-top: 0;
         }
-        /* Proje Kartı İçindeki Link Kutularının Kapsayıcısı */
+
+        /* OVAL LİNK BUTONLARI */
         .project-links {
-            display: flex; /* İçindeki linkleri yan yana dizer */
-            justify-content: space-around; /* Linkler arasına eşit boşluk bırakır */
-            margin-top: 20px; /* Butonların yukarıdan boşluğunu ayarlar */
+            display: flex; 
+            justify-content: space-around; 
+            margin-top: 20px;
         }
 
-        /* Tek Bir Oval Link Kutusu */
         .project-link-box {
-            background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam arka plan */
-            border: 1px solid #00ffff; /* Neon mavi çerçeve */
-            border-radius: 20px; /* Oval şekil için yuvarlatılmış köşeler */
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid #00ffff; 
+            border-radius: 20px; 
             padding: 8px 15px;
             text-decoration: none;
-            color: #00ffff; /* Neon mavi metin */
+            color: #00ffff; 
             font-size: 0.9em;
             transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
         }
 
-        /* Oval Link Kutusu Hover Efekti */
         .project-link-box:hover {
-            background-color: #00ffff; /* Üzerine gelince neon mavi dolar */
-            color: #000000; /* Metin rengi siyaha döner */
-            border-color: #00ffff; /* Çerçeve rengi aynı kalır */
-            box-shadow: 0 0 10px #00ffff; /* Hafif parlama */
+            background-color: #ff0044; 
+            color: #ffffff; 
+            border-color: #ff0044; 
+            box-shadow: 0 0 10px #ff0044; 
         }
-        
-    </style>
-    </head>
 
+        /* İLETİŞİM BÖLÜMÜ (Sosyal Medya İkonları) */
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5em; 
+            color: #00ffff;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ff0044;
+            text-shadow: 0 0 10px #ff0044;
+        }
+    </style>
+</head>
 <body>
+    <div class="overlay"></div> 
+
     <nav>
-        <div class="logo">
-            <a href="index.html">Tuğçe Pınarbaş</a>
-        </div>
+        <div class="logo"><a href="#">Tuğçe Pınarbaş</a></div>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="index.html#projects">PROJECTS</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 
-    <header class="hero-section">
+    <header id="home" class="hero-section">
         <div class="hero-content">
             <h1>Hi, I am Tuğçe Pınarbaş</h1>
             <p>Game Developer / Game Artist</p>
-            <div class="button-group">
-                <a href="#projects" class="btn">PROJECTS</a>
-                <a href="about.html" class="btn">ABOUT ME</a>
-                <a href="#contact" class="btn">CONTACT</a> 
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="project-link-box">PROJECTS</a>
+                <a href="#about" class="project-link-box" style="border-color: #ff0044; color: #ff0044;">ABOUT ME</a>
+                <a href="#contact" class="project-link-box">CONTACT</a>
             </div>
         </div>
     </header>
 
     <section id="projects">
-        <section id="projects">
         <h2>Öne Çıkan Projeler</h2>
         
         <div class="projects-container">
 
             <div class="project-card">
+                <img src="proje1_gorsel.jpg" alt="Labyrinth 3D Ekran Görüntüsü">
+                
+                <h3>Labyrinth 3D</h3>
+                <p>
+                    Unity ile geliştirdiğim 3D labirent oyunu. 
+                    Karakter hareketlerinden sorumlu fizik motoru ve dinamik yol bulma (A*) algoritmaları benim sorumluluğumdaydı.
+                </p>
+                
+                <div class="project-links">
+                    <a href="SOL_KART_GİTHUB_LİNKİ" target="_blank" class="project-link-box">GitHub</a>
+                    <a href="SOL_KART_DEMO_LİNKİ" target="_blank" class="project-link-box">Demo</a>
                 </div>
+            </div>
 
             <div class="project-card">
-                </div>
-            
-        </div> </section>
-    
-       <section id="contact" class="contact-section">
-        <div class="contact-box">
-            <h2>İLETİŞİME GEÇ</h2>
-            <p>Bir proje teklifi veya işbirliği için bana ulaşabilirsiniz.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/tugcepinarbas" target="_blank" class="contact-btn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+                <img src="proje2_gorsel.jpg" alt="Kısa Proje Prototip Görüntüsü">
                 
-                <a href="https://github.com/tugcepinarbas" target="_blank" class="contact-btn">
-                    <i class="fab fa-github"></i>
-                </a>
-                
-                <a href="mailto:tugcepinarbas5@gmail.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-     
-    </section>
-
-</body>
-</html>
+                <h3>Kısa Proje Prototip</h3>
+                <p>
+                    Kısa sürede geliştirdiğim bu prototip, yeni bir oyun mekaniğini test etmek için yapıldı. 
+                    Mekanik tasarım ve 3D modelleme süreçlerini tek başıma yürüttüm.
+                </p>
