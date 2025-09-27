@@ -34,7 +34,7 @@
         nav {
             position: fixed; top: 0; width: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px 25px; 
+            padding: 15px 40px; 
             z-index: 1000;
             display: flex;
             justify-content: space-between; 
@@ -58,7 +58,16 @@
         }
 
         /* Menü Linkleri */
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+         /* Menü Linklerini Sola Çekme */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            
+            /* SAĞDAN İÇERİ ÇEKMEK İÇİN BOŞLUK EKLEDİK */
+            margin-right: 50px; /* Bu değeri deneyerek istediğiniz mesafeyi ayarlayın */
+        }
         nav ul li a {
             color: #f4f4f4; 
             text-decoration: none;
