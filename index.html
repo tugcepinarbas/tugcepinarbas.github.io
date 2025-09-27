@@ -15,7 +15,7 @@
             background-color: #000000; 
             
             /* ARKA PLAN GÖRSELİ AYARLARI */
-            background-image: url('oyun_ekrani.jpg'); /* !!! KENDİ GÖRSEL ADINIZI GİRİN !!! */
+            background-image: url('oyun_ekrani.jpg'); /* !!! Kendi görsel adınızla değiştirin !!! */
             background-size: cover; 
             background-attachment: fixed; 
             background-position: center; 
@@ -40,21 +40,25 @@
         /* NAVİGASYON ÇUBUĞU */
         nav {
             position: fixed; top: 0; width: 100%;
-            background-color: transparent; 
-            padding: 15px 30px; 
+            background-color: transparent; /* ŞEFFAF ARKA PLAN */
+            padding: 15px 30px; /* İnce çubuk ve yan boşluk */
             z-index: 1000;
             display: flex;
             justify-content: space-between; 
             align-items: center;
-            box-shadow: 0 5px 10px -5px #ff0044; /* KIRMIZI ŞERİT EFEKTİ */
+            
+            /* KIRMIZI ŞERİT EFEKTİ (Neon Gölge) */
+            box-shadow: 0 5px 10px -5px #ff0044; 
         }
 
         /* LOGO STİLİ */
         .logo a {
             color: #ffffff; 
+            text-shadow: none; 
             text-decoration: none;
             font-size: 1.2em; 
             font-weight: normal;
+            /* Sabit zemin kaldırıldı */
         }
 
         /* NAVİGASYON LİNKLERİ */
@@ -63,7 +67,8 @@
             padding: 0;
             margin: 0;
             display: flex;
-            margin-right: 50px; /* Sağa çekme */
+            /* Linkleri sağdan içeri çekme */
+            margin-right: 50px; 
         }
 
         nav ul li {
@@ -80,7 +85,7 @@
         }
 
         nav ul li a:hover {
-            color: #ff0044; 
+            color: #ff0044; /* Neon Kırmızı hover efekti */
             box-shadow: 0 0 10px #ff0044;
         }
 
@@ -91,6 +96,8 @@
             justify-content: center; 
             align-items: center; 
             position: relative;
+            
+            /* YARI SAYDAM SİYAH PERDE */
             background-color: rgba(0, 0, 0, 0.7); 
         }
 
@@ -98,18 +105,22 @@
             font-size: 3em;
             margin-bottom: 0.1em;
             color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
         .hero-content p {
             font-size: 1.2em;
-            color: #ff0044; 
+            color: #ff0044; /* Neon Kırmızı */
             text-shadow: 0 0 10px #ff0044; 
         }
 
-        /* TÜM İÇERİK SECTİON ALANLARI */
+        /* TÜM İÇERİK SECTİON ALANLARI (Projeler, İletişim) */
         section {
             padding: 80px 20px;
+            
+            /* YARI SAYDAM SİYAH PERDE */
             background-color: rgba(0, 0, 0, 0.7); 
+            
             text-align: center; 
         }
         
@@ -137,13 +148,13 @@
             background-color: rgba(0, 0, 0, 0.8); 
             box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); 
             transition: transform 0.3s;
-            height: 500px; 
+            height: 500px; /* Sabit yükseklik */
             overflow-y: auto; 
         }
 
         .project-card:hover {
             transform: scale(1.05); 
-            box-shadow: 0 0 15px #ff0044; 
+            box-shadow: 0 0 15px #ff0044; /* Neon Kırmızı Hover */
         }
         
         .project-card img {
@@ -164,8 +175,7 @@
             justify-content: space-around; 
             margin-top: 20px;
         }
-        
-        /* 1. TÜM LİNKLERİN TEMEL STİLİ (GitHub Mavi Çerçeve) */
+
         .project-link-box {
             background-color: rgba(0, 0, 0, 0.6);
             border: 1px solid #00ffff; 
@@ -177,7 +187,6 @@
             transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
         }
 
-        /* GİTHUB Butonu Hover Efekti (Hover'da Kırmızı gölge) */
         .project-link-box:hover {
             background-color: #ff0044; 
             color: #ffffff; 
@@ -185,12 +194,105 @@
             box-shadow: 0 0 10px #ff0044; 
         }
 
-        /* 2. DEMO BUTONU İÇİN ÖZEL YEŞİL STİL */
-        .project-link-box.green {
-            border-color: #39ff14; /* Yeşil çerçeve */
-            color: #39ff14; 
+        /* İLETİŞİM BÖLÜMÜ (Sosyal Medya İkonları) */
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5em; 
+            color: #00ffff;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
         }
 
-        /* DEMO Butonu Hover Efekti (Hover'da Yeşil gölge) */
-        .project-link-box.green:hover {
-            background-color: #39ff14;
+        .social-icons a:hover {
+            color: #ff0044;
+            text-shadow: 0 0 10px #ff0044;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> 
+
+    <nav>
+        <div class="logo"><a href="#">Tuğçe Pınarbaş</a></div>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I am Tuğçe Pınarbaş</h1>
+            <p>Game Developer / Game Artist</p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="project-link-box">PROJECTS</a>
+                <a href="#about" class="project-link-box" style="border-color: #ff0044; color: #ff0044;">ABOUT ME</a>
+                <a href="#contact" class="project-link-box">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Öne Çıkan Projeler</h2>
+        
+        <div class="projects-container">
+
+            <div class="project-card">
+                <img src="proje1_gorsel.jpg" alt="Labyrinth 3D Ekran Görüntüsü">
+                
+                <h3>Labyrinth 3D</h3>
+                <p>
+                    Unity ile geliştirdiğim 3D labirent oyunu. 
+                    Karakter hareketlerinden sorumlu fizik motoru ve dinamik yol bulma (A*) algoritmaları benim sorumluluğumdaydı.
+                </p>
+                
+                <div class="project-links">
+                    <a href="SOL_KART_GİTHUB_LİNKİ" target="_blank" class="project-link-box">GitHub</a>
+                    <a href="SOL_KART_DEMO_LİNKİ" target="_blank" class="project-link-box">Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="proje2_gorsel.jpg" alt="Kısa Proje Prototip Görüntüsü">
+                
+                <h3>Kısa Proje Prototip</h3>
+                <p>
+                    Kısa sürede geliştirdiğim bu prototip, yeni bir oyun mekaniğini test etmek için yapıldı. 
+                    Mekanik tasarım ve 3D modelleme süreçlerini tek başıma yürüttüm.
+                </p>
+                
+                <div class="project-links">
+                    <a href="SAĞ_KART_GİTHUB_LİNKİ" target="_blank" class="project-link-box">GitHub</a>
+                    <a href="SAĞ_KART_DEMO_LİNKİ" target="_blank" class="project-link-box">Demo</a>
+                </div>
+            </div>
+            
+        </div> 
+    </section>
+    
+    <section id="about">
+        <h2>Hakkımda</h2>
+        <p>Ben Tuğçe Pınarbaş, Game Developer ve Game Artist olarak çalışıyorum. Ağırlıklı olarak Unity ve C# ile ilgileniyorum. Dijital sanat ve modelleme konusunda da tecrübem bulunmaktadır.</p>
+    </section>
+
+    <section id="contact">
+        <h2>İletişime Geç</h2>
+        <p>Bir proje teklifi veya işbirliği için benimle ulaşabilirsiniz.</p>
+        
+        <div class="social-icons">
+            <a href="#" target="_blank">LinkedIn</a> 
+            <a href="#" target="_blank">GitHub</a> 
+            <a href="#" target="_blank">E-posta</a>
+        </div>
+    </section>
+
+    <footer>
+        <p style="padding: 20px; font-size: 0.8em; color: rgba(255, 255, 255, 0.5);">© 2024 Tuğçe Pınarbaş. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
