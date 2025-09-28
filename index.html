@@ -143,18 +143,25 @@
         }
         
         /* İLETİŞİM BÖLÜMÜ */
+        /* İLETİŞİM BUTONLARI */
         .social-icons a {
             display: inline-block;
+            width: 40px; /* Yuvarlak Buton Genişliği */
+            height: 40px; /* Yuvarlak Buton Yüksekliği */
+            line-height: 40px; /* Metni Dikey Ortalamak İçin */
             margin: 0 10px;
             font-size: 1.5em; 
-            color: #00ffff;
+            color: #00ffff; /* Mavi Neon Metin Rengi */
             text-decoration: none;
-            transition: color 0.3s, text-shadow 0.3s;
+            border: 1px solid #00ffff; /* Mavi Neon Çerçeve */
+            border-radius: 50%; /* Yuvarlak Yapmak İçin */
+            transition: color 0.3s, text-shadow 0.3s, background-color 0.3s, box-shadow 0.3s;
         }
 
         .social-icons a:hover {
-            color: #ff0044;
-            text-shadow: 0 0 10px #ff0044;
+            color: #ffffff; 
+            background-color: #00ffff; /* Mavi Neon Arka Plan Hover */
+            box-shadow: 0 0 15px #00ffff; /* Mavi Neon Gölge Hover */
         }
     </style>
 </head>
