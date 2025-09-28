@@ -15,7 +15,7 @@
             background-color: #000000; 
             
             /* ARKA PLAN GÖRSELİ AYARLARI */
-            background-image: url('photo_6.jpg'); /* !!! Kendi görsel adınızla değiştirin !!! */
+            background-image: url('photo_6.jpg'); /* !!! KENDİ GÖRSEL ADINIZI KONTROL EDİN/GİRİN !!! */
             background-size: cover; 
             background-attachment: fixed; 
             background-position: center; 
@@ -40,25 +40,21 @@
         /* NAVİGASYON ÇUBUĞU */
         nav {
             position: fixed; top: 0; width: 100%;
-            background-color: transparent; /* ŞEFFAF ARKA PLAN */
-            padding: 15px 30px; /* İnce çubuk ve yan boşluk */
+            background-color: transparent; 
+            padding: 15px 30px; 
             z-index: 1000;
             display: flex;
             justify-content: space-between; 
             align-items: center;
-            
-            /* KIRMIZI ŞERİT EFEKTİ (Neon Gölge) */
-            box-shadow: 0 5px 10px -5px #ff0044; 
+            box-shadow: 0 5px 10px -5px #ff0044; /* KIRMIZI ŞERİT EFEKTİ */
         }
 
         /* LOGO STİLİ */
         .logo a {
             color: #ffffff; 
-            text-shadow: none; 
             text-decoration: none;
             font-size: 1.2em; 
             font-weight: normal;
-            /* Sabit zemin kaldırıldı */
         }
 
         /* NAVİGASYON LİNKLERİ */
@@ -67,7 +63,6 @@
             padding: 0;
             margin: 0;
             display: flex;
-            /* Linkleri sağdan içeri çekme */
             margin-right: 50px; 
         }
 
@@ -85,7 +80,7 @@
         }
 
         nav ul li a:hover {
-            color: #ff0044; /* Neon Kırmızı hover efekti */
+            color: #ff0044; 
             box-shadow: 0 0 10px #ff0044;
         }
 
@@ -96,8 +91,6 @@
             justify-content: center; 
             align-items: center; 
             position: relative;
-            
-            /* YARI SAYDAM SİYAH PERDE */
             background-color: rgba(0, 0, 0, 0.7); 
         }
 
@@ -105,22 +98,18 @@
             font-size: 3em;
             margin-bottom: 0.1em;
             color: #ffffff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
         .hero-content p {
             font-size: 1.2em;
-            color: #ff0044; /* Neon Kırmızı */
+            color: #ff0044; 
             text-shadow: 0 0 10px #ff0044; 
         }
 
-        /* TÜM İÇERİK SECTİON ALANLARI (Projeler, İletişim) */
+        /* TÜM İÇERİK SECTİON ALANLARI */
         section {
             padding: 80px 20px;
-            
-            /* YARI SAYDAM SİYAH PERDE */
             background-color: rgba(0, 0, 0, 0.7); 
-            
             text-align: center; 
         }
         
@@ -148,13 +137,13 @@
             background-color: rgba(0, 0, 0, 0.8); 
             box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); 
             transition: transform 0.3s;
-            height: 500px; /* Sabit yükseklik */
+            height: 500px; 
             overflow-y: auto; 
         }
 
         .project-card:hover {
             transform: scale(1.05); 
-            box-shadow: 0 0 15px #ff0044; /* Neon Kırmızı Hover */
+            box-shadow: 0 0 15px #ff0044; 
         }
         
         .project-card img {
@@ -175,7 +164,8 @@
             justify-content: space-around; 
             margin-top: 20px;
         }
-
+        
+        /* GİTHUB Mavi Çerçeve, Kırmızı Hover */
         .project-link-box {
             background-color: rgba(0, 0, 0, 0.6);
             border: 1px solid #00ffff; 
@@ -194,7 +184,8 @@
             box-shadow: 0 0 10px #ff0044; 
         }
 
-        /* İLETİŞİM BÖLÜMÜ (Sosyal Medya İkonları) */
+       
+        /* İLETİŞİM BÖLÜMÜ */
         .social-icons a {
             display: inline-block;
             margin: 0 10px;
@@ -237,22 +228,23 @@
     </header>
 
     <section id="projects">
-        <h2>Highlight Projects</h2>
+        <h2>Öne Çıkan Projeler</h2>
         
         <div class="projects-container">
 
             <div class="project-card">
-                <img src="proje1_gorsel.jpg" alt="Labyrinth 3D Ekran Görüntüsü">
+                <img src="labyrinth_3d_gorseli.jpg" alt="Labyrinth 3D Ekran Görüntüsü">
                 
-                <h3>Labyrinth 3D</h3>
+                <h3>LABYRINTH 3D</h3>
                 <p>
                     Unity ile geliştirdiğim 3D labirent oyunu. 
-                    Karakter hareketlerinden sorumlu fizik motoru ve dinamik yol bulma (A*) algoritmaları benim sorumluluğumdaydı.
+                    Projenin ana odak noktası, karakter hareketleri, oyun fiziği ve dinamik yol bulma (A*) sistemleridir.
+                    Görsel tasarım ve level düzenlemeleri tarafımca yapılmıştır.
                 </p>
                 
                 <div class="project-links">
-                    <a href="SOL_KART_GİTHUB_LİNKİ" target="_blank" class="project-link-box">GitHub</a>
-                    <a href="SOL_KART_DEMO_LİNKİ" target="_blank" class="project-link-box">Demo</a>
+                    <a href="GİTHUB_LİNKİ_BURAYA" target="_blank" class="project-link-box">GitHub</a>
+                    <a href="DEMO_LİNKİ_BURAYA" target="_blank" class="project-link-box green">Demo</a>
                 </div>
             </div>
 
@@ -264,18 +256,14 @@
                     Kısa sürede geliştirdiğim bu prototip, yeni bir oyun mekaniğini test etmek için yapıldı. 
                     Mekanik tasarım ve 3D modelleme süreçlerini tek başıma yürüttüm.
                 </p>
-                
-                <div class="project-links">
-                    <a href="SAĞ_KART_GİTHUB_LİNKİ" target="_blank" class="project-link-box">GitHub</a>
-                    <a href="SAĞ_KART_DEMO_LİNKİ" target="_blank" class="project-link-box">Demo</a>
-                </div>
+                            
             </div>
             
         </div> 
     </section>
     
     <section id="about">
-        <h2>Hakkımda</h2>
+        <h2>About Me</h2>
         <p>Ben Tuğçe Pınarbaş, Game Developer ve Game Artist olarak çalışıyorum. Ağırlıklı olarak Unity ve C# ile ilgileniyorum. Dijital sanat ve modelleme konusunda da tecrübem bulunmaktadır.</p>
     </section>
 
