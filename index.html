@@ -15,7 +15,8 @@
             background-color: #000000; 
             
             /* ARKA PLAN GÖRSELİ AYARLARI */
-            background-image: url('photo_6.jpg'); /* !!! KENDİ GÖRSEL ADINIZI KONTROL EDİN/GİRİN !!! */
+            /* LÜTFEN DOSYA ADINI KENDİ GÖRSELİNİZİN ADIYLA DEĞİŞTİRİN */
+            background-image: url('photo_6.jpg'); 
             background-size: cover; 
             background-attachment: fixed; 
             background-position: center; 
@@ -46,7 +47,7 @@
             display: flex;
             justify-content: space-between; 
             align-items: center;
-            box-shadow: 0 5px 10px -5px #ff0044; /* KIRMIZI ŞERİT EFEKTİ */
+            box-shadow: 0 5px 10px -5px #ff0044; /* Kırmızı alt çizgi/gölge */
         }
 
         /* LOGO STİLİ */
@@ -91,7 +92,7 @@
             justify-content: center; 
             align-items: center; 
             position: relative;
-            background-color: rgba(0, 0, 0, 0.7); 
+            background-color: rgba(0, 0, 0, 0.7); /* Yarı saydam arka plan */
         }
 
         .hero-content h1 {
@@ -118,54 +119,8 @@
             color: #00ffff;
             text-shadow: 0 0 10px #00ffff;
         }
-        
-        /* PROJELER BÖLÜMÜ */
-        .projects-container {
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 40px; 
-            margin-top: 40px;
-        }
 
-        .project-card {
-            width: 300px; 
-            padding: 20px;
-            text-align: left;
-            border: 1px solid rgba(0, 255, 255, 0.4); 
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.8); 
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); 
-            transition: transform 0.3s;
-            height: 500px; 
-            overflow-y: auto; 
-        }
-
-        .project-card:hover {
-            transform: scale(1.05); 
-            box-shadow: 0 0 15px #ff0044; 
-        }
-        
-        .project-card img {
-            width: 100%; 
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        
-        .project-card h3 {
-            color: #00ffff; 
-            margin-top: 0;
-        }
-
-        /* OVAL LİNK BUTONLARI */
-        .project-links {
-            display: flex; 
-            justify-content: space-around; 
-            margin-top: 20px;
-        }
-        
-        /* GİTHUB Mavi Çerçeve, Kırmızı Hover */
+        /* OVAL BUTONLARIN STİLİ (Sadece HERO bölümü için tutuldu) */
         .project-link-box {
             background-color: rgba(0, 0, 0, 0.6);
             border: 1px solid #00ffff; 
@@ -174,17 +129,11 @@
             text-decoration: none;
             color: #00ffff; 
             font-size: 0.9em;
-            transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
+            transition: box-shadow 0.3s;
+            display: inline-block;
+            margin: 0 10px;
         }
-
-        .project-link-box:hover {
-            background-color: #ff0044; 
-            color: #ffffff; 
-            border-color: #ff0044; 
-            box-shadow: 0 0 10px #ff0044; 
-        }
-
-       
+        
         /* İLETİŞİM BÖLÜMÜ */
         .social-icons a {
             display: inline-block;
@@ -229,41 +178,11 @@
 
     <section id="projects">
         <h2>Öne Çıkan Projeler</h2>
-        
-        <div class="projects-container">
-
-            <div class="project-card">
-                <img src="labyrinth_3d_gorseli.jpg" alt="Labyrinth 3D Ekran Görüntüsü">
-                
-                <h3>LABYRINTH 3D</h3>
-                <p>
-                    Unity ile geliştirdiğim 3D labirent oyunu. 
-                    Projenin ana odak noktası, karakter hareketleri, oyun fiziği ve dinamik yol bulma (A*) sistemleridir.
-                    Görsel tasarım ve level düzenlemeleri tarafımca yapılmıştır.
-                </p>
-                
-                <div class="project-links">
-                    <a href="GİTHUB_LİNKİ_BURAYA" target="_blank" class="project-link-box">GitHub</a>
-                    <a href="DEMO_LİNKİ_BURAYA" target="_blank" class="project-link-box green">Demo</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="proje2_gorsel.jpg" alt="Kısa Proje Prototip Görüntüsü">
-                
-                <h3>Kısa Proje Prototip</h3>
-                <p>
-                    Kısa sürede geliştirdiğim bu prototip, yeni bir oyun mekaniğini test etmek için yapıldı. 
-                    Mekanik tasarım ve 3D modelleme süreçlerini tek başıma yürüttüm.
-                </p>
-                            
-            </div>
-            
-        </div> 
+        <p>Projeler burada listelenecek.</p>
     </section>
     
     <section id="about">
-        <h2>About Me</h2>
+        <h2>Hakkımda</h2>
         <p>Ben Tuğçe Pınarbaş, Game Developer ve Game Artist olarak çalışıyorum. Ağırlıklı olarak Unity ve C# ile ilgileniyorum. Dijital sanat ve modelleme konusunda da tecrübem bulunmaktadır.</p>
     </section>
 
