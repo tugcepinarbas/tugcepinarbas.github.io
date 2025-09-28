@@ -202,17 +202,34 @@
             color: #000000; 
             border-color: #00ffff; 
             box-shadow: 0 0 10px #00ffff; 
-        }
-         /* İLETİŞİM BÖLÜMÜ SİMGELERİNİ SARAN KUTU */
+
+             /* İLETİŞİM SİMGELERİNİ SARAN KUTU (YATAY HİZALAMA) */
         .social-icons {
-            /* İkonları aşağı kaydıran boşluk (daha önce ekledik) */
-            margin-top: 50px; 
-            margin-bottom: 20px; 
-            
-            /* !!! BU İKİ SATIR İKONLARI YAN YANA GETİRİR !!! */
+            /* Bu satırlar ikonları yan yana getirir */
             display: flex; 
             justify-content: center; 
+            
+            /* İletişim yazısından aşağıya iten boşluk */
+            margin-top: 50px;
+            margin-bottom: 20px; 
         }
+            
+        <footer>
+        <div class="so /* FOOTER'IN KENDİSİNİ KONTROL ETMEK */
+        footer {
+            text-align: center;
+            padding-bottom: 20px;
+            /* Ekstra bir background-color olmamalı ki, arka plan görsün */
+            background-color: transparent; 
+        }
+            .social-icons">
+            <a href="https://www.linkedin.com/in/SENİN-LINKEDIN-KULLANICI-ADIN" target="_blank"><i class="fab fa-linkedin-in"></i></a> 
+            <a href="https://github.com/SENİN-GITHUB-KULLANICI-ADIN" target="_blank"><i class="fab fa-github"></i></a> 
+            <a href="mailto:SENİN-EPOSTA-ADRESIN@ORNEK.COM" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+        
+        <p style="padding: 20px; font-size: 0.8em; color: rgba(255, 255, 255, 0.5);">© 2024 Tuğçe Pınarbaş. Tüm hakları saklıdır.</p>
+    </footer>
         
         /* İLETİŞİM BÖLÜMÜ SİMGELERİ */
         .social-icons a {
