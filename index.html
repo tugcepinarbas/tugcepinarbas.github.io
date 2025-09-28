@@ -41,9 +41,9 @@
         }
 
         /* NAVİGASYON ÇUBUĞU - ANTRASİT ZEMİN */
-        nav {
+            nav {
             position: fixed; top: 0; width: 100%;
-            /* ANTRASİT ZEMİN (Yarı Saydam olarak bıraktım, tamamen opak isterseniz 1 yapın) */
+            /* ZEMİN YARI SAYDAM ANTRASİT KALMALI */
             background-color: rgba(30, 30, 30, 0.9); 
             padding: 20px 30px; 
             z-index: 1000;
@@ -87,8 +87,10 @@
 
         /* NAVİGASYON HOVER EFEKTİ (Üzerine gelince antrasit zemin) */
         nav ul li a:hover {
-            color: #ffffff; /* Yazı rengi değişmesin (zaten beyaz) */
-            background-color: rgba(60, 60, 60, 0.8); /* Yarı Saydam Antrasit Arka Plan */
+            color: #f0f0f0; /* Hafif bir renk değişimi */
+            /* ZEMİN EFEKTİNİ SİLİYORUZ */
+            background-color: transparent; 
+    
         }
 
         /* HERO BÖLÜMÜ (ANA EKRAN) */
