@@ -244,25 +244,29 @@
         <p style="padding: 20px; font-size: 0.8em; color: rgba(255, 255, 255, 0.5);">© 2024 Tuğçe Pınarbaş. Tüm hakları saklıdır.</p>
     </footer>
         
-        /* İLETİŞİM BÖLÜMÜ SİMGELERİ */
+       /* İLETİŞİM İKONLARI BUTON STİLİ (DAİRE YAPISI VE NEON) */
         .social-icons a {
-            display: inline-block;
-            width: 40px; 
-            height: 40px; 
-            line-height: 40px; 
-            margin: 0 10px;
-            font-size: 1.5em; 
-            color: #00ffff; /* Mavi Neon Metin Rengi */
-            text-decoration: none; 
-            border: 1px solid #00ffff; /* Mavi Neon Çerçeve */
-            border-radius: 50%; /*Yuvarlaklık */
-            transition: color 0.3s, text-shadow 0.3s, background-color 0.3s, box-shadow 0.3s;
+            display: inline-block; /* Yan yana durmalarını sağlar */
+            width: 40px;          /* İkonun genişliği */
+            height: 40px;         /* İkonun yüksekliği */
+            line-height: 40px;    /* İkonu dikey ortalar */
+            margin: 0 15px;       /* İkonlar arası yatay boşluk */
+            font-size: 1.5em;     /* İkon boyutu */
+            color: #00ffff;       /* Neon mavi ikon rengi */
+            text-decoration: none;
+            
+            /* BU KISIM DAİRE VE KENARLIĞI SAĞLAR */
+            border: 1px solid #00ffff; /* Neon mavi çerçeve */
+            border-radius: 50%;        /* %50 kenar yuvarlama = Daire */
+            
+            transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
         }
 
+        /* HOVER EFEKTİ (Üzerine gelindiğinde dolgu ve gölge) */
         .social-icons a:hover {
-            color: #ffffff; 
-            background-color: #00ffff; 
-            box-shadow: 0 0 15px #00ffff; 
+            color: #000000;         /* İkon rengi siyaha döner */
+            background-color: #00ffff; /* Arka plan neon mavi dolar */
+            box-shadow: 0 0 15px #00ffff; /* Neon mavi gölge */
         }
     </style>
 </head>
