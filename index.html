@@ -247,25 +247,26 @@
        /* İLETİŞİM İKONLARI BUTON STİLİ (DAİRE YAPISI VE NEON) */
         .social-icons a {
             display: inline-block; /* Yan yana durmalarını sağlar */
-            width: 40px;          /* İkonun genişliği */
-            height: 40px;         /* İkonun yüksekliği */
-            line-height: 40px;    /* İkonu dikey ortalar */
+            width: 50px;          /* İkonun genişliği */
+            height: 50px;         /* İkonun yüksekliği */
+            line-height: 50px;    /* İkonu dikey ortalar */
             margin: 0 25px;       /* İkonlar arası yatay boşluk */
-            font-size: 1.5em;     /* İkon boyutu */
+            font-size: 2.5em;     /* İkon boyutu */
             color: #00ffff;       /* Neon mavi ikon rengi */
             text-decoration: none;
             
-            /* BU KISIM DAİRE VE KENARLIĞI SAĞLAR */
-            border: 1px solid #00ffff; /* Neon mavi çerçeve */
-            border-radius: 50%;        /* %50 kenar yuvarlama = Daire */
+           /* DAİRE VE KENARLIĞI KESİNLEŞTİRİYORUZ */
+            border: 2px solid #00ffff !important; /* Kalınlaştırılmış neon mavi çerçeve */
+            border-radius: 50% !important;        /* DAİRE HALİNE GELMESİNİ GARANTİ EDİYORUZ */
             
             transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+            text-shadow: 0 0 5px #00ffff; /* İkona hafif neon parlaklık ekledik */
         }
 
         /* HOVER EFEKTİ (Üzerine gelindiğinde dolgu ve gölge) */
         .social-icons a:hover {
-            color: #000000;         /* İkon rengi siyaha döner */
-            background-color: #00ffff; /* Arka plan neon mavi dolar */
+            color: #000000;  !important; /* İkonu siyaha çevirir */
+            background-color: #00ffff; !important; /* Arka plan neon mavi dolar */
             box-shadow: 0 0 15px #00ffff; /* Neon mavi gölge */
         }
     </style>
