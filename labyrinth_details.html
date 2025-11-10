@@ -31,13 +31,41 @@
             text-decoration: none;
             transition: color 0.3s;
         }
+        /* BAŞLIK VE ANA SAYFAYA DÖN LİNKİ İÇİN KAPSAYICI STİLİ */
+        .return-link-container {
+            position: fixed; /* Sayfanın kaydırılsa bile sabit kalmasını sağlar */
+            top: 0;          /* Sayfanın en üstüne yerleştirir */
+            left: 0;         /* Sayfanın en soluna yerleştirir */
+            padding: 20px;   /* Etrafına boşluk ekler */
+            width: 100%;     /* Genişliğini tüm sayfa yapar */
+            text-align: left; /* Metinleri sola hizalar */
+            z-index: 1000;   /* Diğer tüm elemanların üstünde görünmesini sağlar */
+            background-color: transparent; /* Arka planı şeffaf yapar */
+        }
+        
+        /* ANA SAYFAYA DÖN LİNKİNİN KENDİ STİLİ */
+        .return-link-container a {
+            font-size: 0.9em !important; /* Yazı boyutunu küçültür */
+            padding: 5px 10px;
+            border: 1px solid #00ffff; /* Zarif neon çerçeve */
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .return-link-container a:hover {
+            background-color: #00ffff;
+            color: #0a0a0a !important;
+        }
     </style>
 </head>
 <body>
     
-    <header style="padding: 30px; margin-bottom: 20px;">
+  <div class="return-link-container">
+        <a href="index.html">&larr; Ana Sayfaya Dön</a>
+    </div>
+
+    <header style="padding-top: 80px; text-align: center; color: #ffffff;">
         <h1>LABYRINTH 3D</h1>
-        <a href="index.html" style="font-size: 1.2em;">&larr; Ana Sayfaya Dön</a>
     </header>
 
     <section id="project-details" style="padding: 20px 15%; text-align: left;">
