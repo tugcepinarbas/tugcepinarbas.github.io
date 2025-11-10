@@ -5,27 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LABYRINTH 3D Detayları - Tuğçe Pınarbaş</title>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <style>
-        /* index.html dosyanızdaki tüm <style> etiketinin içindeki CSS kodunu buraya yapıştırın */
+        /* !!! ÖNEMLİ ADIM: index.html dosyanızdaki
+         <style> etiketinin içindeki TÜM CSS kodunu buraya yapıştırın.
+         Aksi halde sayfa beyaz kalacaktır. 
+        */
+        
+        /* Örnek olarak arka plan ve temel metin stilini ekliyoruz */
+        body {
+            background-color: #0a0a0a; /* Siyah arka plan */
+            font-family: Arial, sans-serif;
+            color: #ffffff; /* Beyaz metin */
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #00ffff; /* Neon mavi başlıklar */
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        a {
+            color: #00ffff; /* Link rengi */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
     </style>
 </head>
 <body>
     
-    <header style="padding: 50px; text-align: center; color: #ffffff;">
-        <h1>LABYRINTH 3D Detayları</h1>
-        <a href="index.html" style="color: #00ffff; text-decoration: none;">&larr; Ana Sayfaya Dön</a>
+    <header style="padding: 30px; margin-bottom: 20px;">
+        <h1>LABYRINTH 3D</h1>
+        <a href="index.html" style="font-size: 1.2em;">&larr; Ana Sayfaya Dön</a>
     </header>
 
-    <section id="project-details" style="padding: 20px 10%; color: #ffffff;">
+    <section id="project-details" style="padding: 20px 15%; text-align: left;">
         
         <h2>Proje Özeti</h2>
         
         <p>
-            Unity ile geliştirdiğim 3D labirent oyunu. Projenin ana odak noktası, karakter hareketleri, oyun fiziği ve dinamik yol bulma sistemleridir. Görsel tasarım ve level düzenlemeleri tarafımca yapılmıştır.
+            Unity ile geliştirdiğim 3D labirent oyunu. Projenin ana odak noktası, karakter hareketleri, oyun fiziği ve dinamik yol bulma (A*) sistemleridir. Görsel tasarım ve level düzenlemeleri tarafımca yapılmıştır.
         </p>
         
+        <h2>Teknik Detaylar</h2>
         <p>
-            [Buraya projenizle ilgili daha fazla görsel, video veya detaylı teknik açıklama eklenebilir.]
+            Bu projede Unity'nin NavMesh sistemi yerine, C# ile özel olarak geliştirilmiş **A* (A-Star) algoritması** kullanılarak dinamik yol bulma uygulanmıştır. Karakter kontrolü ve fizik etkileşimleri için Rigidbody bileşenleri optimize edilmiştir.
         </p>
         
         </section>
