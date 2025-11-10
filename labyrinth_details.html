@@ -4,394 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LABYRINTH 3D Detayları - Tuğçe Pınarbaş</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
     <style>
-       
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuğçe Pınarbaş - Game Developer / Game Artist Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    </head>
-       
-    <style>
-        /* TEMEL STİLLER - Body ve Arka Plan */
-        body {
-            margin: 0;
-            font-family: 'Playfair Display', serif; 
-            background-color: #000000;
-            
-            /* ARKA PLAN GÖRSELİ AYARLARI */
-            /* !!! BURAYI KENDİ ARKA PLAN GÖRSELİNİZİN ADIYLA DEĞİŞTİRİNİZ !!! */
-            background-image: url('photo_6.jpeg'); 
-            background-size: cover; 
-            background-attachment: fixed; 
-            background-position: center; 
-            
-            text-align: center;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        /* ARKA PLAN ÜZERİNDEKİ SAYDAM KATMAN */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: transparent; 
-            z-index: -99; 
-        }
-
-        /* NAVİGASYON ÇUBUĞU - ZEMİN RENGİ HTML'DE (Inline) ZORLANDI */
-        nav {
-            position: fixed; top: 0; width: 100%;
-            padding: 20px 30px; 
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between; 
-            align-items: center;
-        }
-
-        /* LOGO STİLİ (Yazı Rengi HTML'DE ZORLANDI) */
-        .logo a {
-            text-decoration: none;
-            font-size: 1.2em; 
-            font-weight: normal;
-        }
-
-        /* NAVİGASYON LİNKLERİ (HOME, ABOUT vb.) */
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            margin-right: 50px; 
-        }
-
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            /* Yazılar Beyaz/Neon Mavi ise HTML'de beyaz zorlandı, burada genel ayarlar kalsın */
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9em;
-            padding: 5px 10px;
-            transition: background-color 0.3s, color 0.3s; 
-            border-radius: 5px; 
-        }
-
-        /* NAVİGASYON HOVER EFEKTİ (Üzerine gelince antrasit zemin) */
-        nav ul li a:hover {
-            color: #ffffff;
-            /* ANTRASİT ZEMİN EFEKTİ */
-            background-color: rgba(60, 60, 60, 0.8); 
-        }
-
-        /* HERO BÖLÜMÜ (ANA EKRAN) */
-        .hero-section {
-            height: 100vh; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            position: relative;
-            background-color: transparent;
-        }
-
-        .hero-content h1 {
-            font-size: 3em;
-            margin-bottom: 0.1em;
-            /* Rengi HTML'de zorlandı */
-        }
-
-        .hero-content p {
-            font-size: 1.2em;
-            color: #ff0044; /* Kırmızı Neon (Bu renk görünüyordu) */
-            text-shadow: 0 0 10px #ff0044; 
-        }
-
-        /* HERO BUTONLARINI SARAN DİV */
-        .hero-buttons {
-            margin-top: 30px; /* Butonları yazıdan uzaklaştırdık */
-            display: flex;
-            justify-content: center;
-        }
-
-        /* HERO EKRANI BUTONLARI ARASI BOŞLUK */
-        .hero-buttons a {
-            margin: 0 15px; /* Butonlar arasına boşluk verdik */
-        }
-
-        /* TÜM İÇERİK SECTİON ALANLARI */
-        section {
-            padding: 80px 20px;
-            background-color: transparent; 
-            text-align: center; 
-        }
+        /* ******************************************************************
+        !!! ÖNEMLİ: index.html dosyanızdaki <style> etiketinin 
+        içindeki TÜM CSS kodunu (Nav, Body, Projeler stilleri vb.) 
+        BURAYA YAPIŞTIRIN. 
+        ******************************************************************
+        */
         
-        section h2 {
-            font-size: 2em;
-            color: #00ffff; /* Mavi Neon */
-            text-shadow: 0 0 10px #00ffff;
-        }
-        
-        /* PROJELER KART STİLLERİ */
-        .projects-container {
-            display: flex; 
-            flex-wrap: wrap; 
-           /* BU SATIR KARTLARI YATAYDA ORTALAR */
-            justify-content: center;
-            gap: 40px; 
-            margin-top: 40px;
-              /* Ekran genişliğini tam kaplamalı */
+        /* Navigasyon Stilleri (Eğer ana sayfadan kopyalamadıysanız bu eksiktir) */
+        nav { 
+            position: fixed; 
+            top: 0; 
             width: 100%; 
-            box-sizing: border-box; 
+            z-index: 10; 
+            background-color: #0a0a0a; /* Siyah arkaplan */
         }
         
-        .project-card {
-            width: 300px; 
-            padding: 20px;
-            text-align: left;
-            
-            border: none; 
-            box-shadow: none; 
-                 
-            background-color: #2c2c2c;
-            
-            /* NEON MAVİ KUTU GÖLGESİ */
-            box-shadow: 0 0 10px #00ffff; 
-            
-            transition: transform 0.3s;
-            height: 400px; 
-            overflow-y: auto; 
-        }
-
-        .project-card:hover {
-            transform: scale(1.05); 
-            box-shadow: none;
-        }
+        /* ... Geri kalan TÜM CSS kodları buraya yapıştırılacak ... */
         
-        .project-card img {
-            width: 100%; 
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        
-        .project-card h3 {
-            color: #00ffff; 
-            margin-top: 0;
-        }
-
-        /* OVAL LİNK BUTONLARI YAPISI (Proje kartları ve Hero butonları) */
-        .project-links {
-            display: flex; 
-            justify-content: space-around; 
-            margin-top: 20px;
-        }
-        
-        .project-link-box {
-            background-color: transparent; 
-            border: 1px solid #00ffff; 
-            border-radius: 20px; 
-            padding: 8px 15px;
-            text-decoration: none;
-            color: #00ffff; 
-            font-size: 0.9em;
-            display: inline-block;
-            transition: box-shadow 0.3s, background-color 0.3s;
-        }
-
-        /* Hover Efekti: Üzerine gelince Mavi Dolgu */
-        .project-link-box:hover {
-            background-color: #00ffff; 
-            color: #000000; 
-            border-color: #00ffff; 
-            box-shadow: 0 0 10px #00ffff; 
-            
- /* İLETİŞİM BÖLÜMÜ GENEL STİLİ */
-        #contact {
-            padding-bottom: 100px; /* Alttaki footer'dan ayrılması için boşluk */
-        }
-       
-       /* İLETİŞİM İKONLARI (Yatayda Ortalama ve Dikeyde Boşluk) */
-        .social-icons {
-            display: flex; 
-            justify-content: center; /* Yatayda ortalar */
-            
-            /* İletişim paragrafından yeterince ayrılmasını sağlar */
-            margin-top: 35px; 
-            margin-bottom: 0;
-            text-align: center; /* Ek bir güvenlik önlemi */        
-        }
-            
-        <footer>
-        <div class="so /* FOOTER'IN KENDİSİNİ KONTROL ETMEK */
-        footer {
-            text-align: center;
-            padding-bottom: 20px;
-            /* Ekstra bir background-color olmamalı ki, arka plan görsün */
-            background-color: transparent; 
-        }
-            .social-icons">
-            <a href="https://www.linkedin.com/in/SENİN-LINKEDIN-KULLANICI-ADIN" target="_blank"><i class="fab fa-linkedin-in"></i></a> 
-            <a href="https://github.com/SENİN-GITHUB-KULLANICI-ADIN" target="_blank"><i class="fab fa-github"></i></a> 
-            <a href="mailto:SENİN-EPOSTA-ADRESIN@ORNEK.COM" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
-        
-        <p style="padding: 20px; font-size: 0.8em; color: rgba(255, 255, 255, 0.5);">© 2024 Tuğçe Pınarbaş. Tüm hakları saklıdır.</p>
-    </footer>
-        
-      /* İLETİŞİM İKONLARI BUTON STİLİ (BÜYÜK DAİRE YAPISI VE NEON) */
-        .social-icons a {
-            display: inline-block !important; /* Yan yana hizalamayı garanti eder */
-            
-            /* BOYUTLAR */
-            width: 50px !important;          
-            height: 50px !important;         
-            line-height: 50px !important;    
-            
-            margin: 0 15px;       
-            font-size: 2em !important;     
-            color: #00ffff !important;       
-            text-decoration: none;
-            
-            /* DAİRE VE KENARLIK GARANTİSİ */
-            border: 2px solid #00ffff !important; 
-            border-radius: 50% !important;        /* DAİRE HALİNE GELMESİNİ GARANTİ EDİYORUZ */
-            
-            transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-            text-shadow: 0 0 5px #00ffff;
-        }
-
-        /* HOVER EFEKTİ */
-        .social-icons a:hover {
-            color: #000000 !important;         
-            background-color: #00ffff !important; 
-            box-shadow: 0 0 20px #00ffff !important; 
-            text-shadow: none !important;
-        }
-    </style>
-</head>
-<body>
-    <div class="overlay"></div> 
-
-    <nav style="background-color: #202020;">
-        <div class="logo"><a href="#home" style="color: #ffffff;">Tuğçe Pınarbaş</a></div>
-        <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
-
-    <header id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 style="color: #ffffff;">Hi, I am Tuğçe Pınarbaş</h1>
-            <p>Game Developer / Game Artist</p>
-            
-            <div class="hero-buttons">
-                <a href="#projects" class="project-link-box">PROJECTS</a>
-                <a href="about.html" class="project-link-box">ABOUT ME</a> 
-                <a href="#contact" class="project-link-box">CONTACT</a>
-            </div>
-        </div>
-    </header>
-<section id="projects">
-        <h2>Öne Çıkan Projeler</h2>
-        
-        <div class="projects-container">
-            
-        <a href="labyrinth_details.html" style="text-decoration: none; color: inherit;">
-            <div class="project-card">
-                <img src="labyrinth.jpg" alt="Proje Adı Ekran Görüntüsü">
-                
-                <h3>LABYRINTH 3D</h3>
-                        
-            </div>
-        </a>
-            
-            <div class="project-card">
-                <img src="PROJE_GÖRSEL_ADINIZ_2.jpg" alt="İkinci Proje Adı Ekran Görüntüsü">
-                <h3>İkinci Projenizin Adı</h3>
-                <p style="color: #ffffff;">
-                    Buraya ikinci projenizin kısa açıklamasını yazınız. Kullanılan teknolojiler, sanat yönü veya öne çıkan bir özellik olabilir.
-                </p>
-            </div>
-            
-            <div class="project-card">
-                <img src="PROJE_GÖRSEL_ADINIZ_3.jpg" alt="Üçüncü Proje Adı Ekran Görüntüsü">
-                <h3>Üçüncü Projenizin Adı</h3>
-                <p style="color: #ffffff;">
-                    Buraya üçüncü projenizin kısa açıklamasını yazınız. Hangi alanda tecrübe kazandığınızı veya oyunun temasını belirtebilirsiniz.
-                </p>
-            </div>
-            
-        </div>
-        </section>
-    
-    <section id="contact">
-    <h2>İletişime Geç</h2>
-        <p style="color: #ffffff;">Bir proje teklifi veya işbirliği için bana ulaşabilirsiniz.</p>
-    </section>
-   
-    </div>
-
-        <footer>
-             <div class="social-icons">
-            <a href="https://www.linkedin.com/in/tugcepinarbas" target="_blank"><i class="fab fa-linkedin-in"></i></a> 
-            <a href="https://github.com/tugcepinarbas" target="_blank"><i class="fab fa-github"></i></a> 
-            <a href="mailto:tugcepinarbas5@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
-        </div>
-        
-        <p style="padding: 20px 0; font-size: 0.8em; color: rgba(255, 255, 255, 0.5);">© 2025 Tuğçe Pınarbaş. Tüm hakları saklıdır.</p>
-    </footer>
-    </body>
-</html>
-       
-
-        
-        /* Aşağıdaki stiller, sadece sayfanın beyaz kalmasını önlemek için temel taslağınızdır: */
-        body {
-            background-color: #0a0a0a;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        h1, h2 {
-            color: #00ffff;
-            text-shadow: 0 0 10px #00ffff;
-        }
-
-        a {
-            color: #00ffff; 
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        /* ANA SAYFAYA DÖN LİNKİ İÇİN YENİ STİL */
+        /* SON OLARAK: ANA SAYFAYA DÖN LİNKİ İÇİN STİL (Sol üst) */
         .return-link-container {
-            position: fixed; /* Sabit kalmasını sağlar */
-            top: 0;          /* En üste */
-            left: 0;         /* En sola */
-            padding: 20px;   /* Boşluk ekler */
-            width: 100%;
-            text-align: left; /* Sola hizalama */
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            padding: 20px; 
+            text-align: left; 
             z-index: 1000; 
-            background-color: transparent; 
         }
         
         .return-link-container a {
@@ -431,7 +72,6 @@
             Bu projede Unity'nin NavMesh sistemi yerine, C# ile özel olarak geliştirilmiş **A* (A-Star) algoritması** kullanılarak dinamik yol bulma uygulanmıştır. Karakter kontrolü ve fizik etkileşimleri için Rigidbody bileşenleri optimize edilmiştir.
         </p>
         
-        </section>
-
-    </body>
+    </section>
+</body>
 </html>
