@@ -146,7 +146,31 @@
             width: 100%; 
             box-sizing: border-box; 
         }
-        
+        /* İKİNCİ KART İÇİN ÖZEL KURALLAR (Kilit Simgesi) */
+        .project-card.coming-soon {
+            position: relative; /* Overlay'in bu kartın içinde konumlanmasını sağlar */
+            pointer-events: none; /* Kartı tıklanamaz yapar */
+        }
+
+        .project-card .overlay {
+            position: absolute; /* Kartın üzerine yerleşir */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Hafif karartılmış arka plan */
+            display: flex; /* İçindeki öğeleri (kilidi) ortalar */
+            justify-content: center;
+            align-items: center;
+            z-index: 5; /* Kartın diğer içeriğinin üzerinde görünür */
+            border-radius: 10px; /* Kartla aynı yuvarlaklığa sahip olur */
+        }
+
+        .project-card .overlay i {
+            font-size: 4em; /* Kilit simgesinin boyutu */
+            color: #ffffff; /* Beyaz kilit simgesi */
+            opacity: 0.6; /* Hafif saydamlık */
+        }
         .project-card {
             width: 300px; 
             padding: 20px;
@@ -161,7 +185,7 @@
             box-shadow: 0 0 10px #00ffff; 
             
             transition: transform 0.3s;
-            height: 300px; 
+            height: 250px; 
             overflow-y: auto; 
         }
 
@@ -313,10 +337,13 @@
             </div>
         </a>
             
-            <div class="project-card">
-                <img src="IKINCI OYUNUM EKLENECEK" alt="İkinci Proje Adı Ekran Görüntüsü">
-                <h3>İkinci Projenizin Adı</h3>                
-            </div>
+            <div class="project-card coming-soon">
+    <img src="PROJE_GÖRSEL_ADINIZ_2.jpg" alt="İkinci Projenizin Adı Ekran Görüntüsü">
+    <h3>İkinci Projenizin Adı</h3>
+    
+    <div class="overlay">
+        <i class="fas fa-lock"></i> </div>
+    </div>
          
         </div>
         </section>
