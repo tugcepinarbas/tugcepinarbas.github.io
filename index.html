@@ -138,103 +138,49 @@
         .projects-container {
             display: flex; 
             flex-wrap: wrap; 
-           /* BU SATIR KARTLARI YATAYDA ORTALAR */
-            justify-content: center;
-            gap: 40px; 
-            margin-top: 40px;
-              /* Ekran genişliğini tam kaplamalı */
-            width: 100%; 
-            box-sizing: border-box; 
-        }
-        /* İKİNCİ KART İÇİN ÖZEL KURALLAR (Kilit Simgesi) */
-        .project-card.coming-soon {
-            position: relative; /* Overlay'in bu kartın içinde konumlanmasını sağlar */
-            pointer-events: none; /* Kartı tıklanamaz yapar */
-            display: flex; 
-            flex-direction: column;
+            justify-content: center; /* Kutuları merkeze hizalar */
+            gap: 30px; 
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .project-card .overlay {
-            position: absolute; /* Kartın üzerine yerleşir */
-            top: 0;
-            left: 0;
+        .project-card {
+            width: 320px; /* Sabit genişlik */
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); 
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #333;
+        }
+
+        .project-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 0 25px #00ffff;
+        }
+
+        .project-card img {
             width: 100%;
-            height: 100%;
-            background-color: rgba(50, 50, 50, 0.7); /* Hafif karartılmış arka plan */
-            display: flex; /* İçindeki öğeleri (kilidi) ortalar */
+            height: 200px;
+            object-fit: cover; /* Görselin kutuyu tam doldurmasını sağlar */
+        }
+
+        .project-info { padding: 20px; }
+        .project-info h3 { color: #ffffff; margin-bottom: 15px; font-size: 1.2em; }
+
+        /* KİLİTLİ KART (COMING SOON) */
+        .coming-soon { opacity: 0.7; cursor: not-allowed; }
+        .lock-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 5; /* Kartın diğer içeriğinin üzerinde görünür */
-            border-radius: 10px; /* Kartla aynı yuvarlaklığa sahip olur */
-        }
-
-        .project-card .overlay i {
-            font-size: 4em; /* Kilit simgesinin boyutu */
-            color: #ffffff; /* Beyaz kilit simgesi */
-            opacity: 0.6; /* Hafif saydamlık */
-        }
-        .project-card {
-            width: 300px; 
-            padding: 20px;
-            text-align: left;
-            
-            border: none; 
-            box-shadow: none; 
-                 
-            background-color: #2c2c2c;
-            
-            /* NEON MAVİ KUTU GÖLGESİ */
-            box-shadow: 0 0 10px #00ffff; 
-            
-            transition: transform 0.3s;
-            height: 250px; 
-            overflow-y: auto; 
-        }
-
-        .project-card:hover {
-            transform: scale(1.05); 
-            box-shadow: none;
-        }
-        
-        .project-card img {
-            width: 100%; 
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        
-        .project-card h3 {
-            color:#ffffff !important; /* Başlık rengini BEYAZ yapar */
-            text-align: center !important; /* Metni ORTALAR */
-            margin-top: 10px; /* Görsel ile başlık arasına biraz boşluk ekler */
-            margin-bottom: 10px;
-        }
-
-        /* OVAL LİNK BUTONLARI YAPISI (Proje kartları ve Hero butonları) */
-        .project-links {
-            display: flex; 
-            justify-content: space-around; 
-            margin-top: 20px;
-        }
-        
-        .project-link-box {
-            background-color: transparent; 
-            border: 1px solid #00ffff; 
-            border-radius: 20px; 
-            padding: 8px 15px;
-            text-decoration: none;
-            color: #00ffff; 
-            font-size: 0.9em;
-            display: inline-block;
-            transition: box-shadow 0.3s, background-color 0.3s;
-        }
-
-        /* Hover Efekti: Üzerine gelince Mavi Dolgu */
-        .project-link-box:hover {
-            background-color: #00ffff; 
-            color: #000000; 
-            border-color: #00ffff; 
-            box-shadow: 0 0 10px #00ffff; 
+            z-index: 2;
             
  /* İLETİŞİM BÖLÜMÜ GENEL STİLİ */
         #contact {
