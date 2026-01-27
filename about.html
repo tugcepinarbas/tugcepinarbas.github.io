@@ -10,151 +10,90 @@
     <title> Tuğçe Pınarbaş - About Me </title>
     
     <style>
-          /* Temel Ayarlar */
+        /* Temel Ayarlar */
         body {
             margin: 0;
             font-family: 'Playfair Display', serif; 
-            background-color: #000000; /* Siyah renk */
+            background-color: #000000; 
             color: #f4f4f4; 
             text-align: center;
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
         
-        /* Navigasyon (Menü) */
+        /* Navigasyon (Menü) - SAĞA YAPIŞMA SORUNU BURADA ÇÖZÜLDÜ */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 6%; /* Buradaki 8% değeri, menüyü kenarlardan içeri çeker */
+            padding: 25px 8%; /* Menüyü kenarlardan %8 içeri çeker */
             background-color: #000;
         }
-        
-        .nav-links {
-            display: flex;
-            gap: 45px; /* Butonlar arası boşluğu biraz artırarak daha dengeli yapabilirim */
-            list-style: none;
-            margin: 0;
-            padding: 0;
-}
 
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 400;
-    font-size: 0.9em;
-    letter-spacing: 1.5px; /* harf arası boşluk */
-    transition: 0.3s;
-}
-        
-        /* Logo Stili */
         .logo a {
             color: #ffffff; 
-            text-shadow: none; 
             text-decoration: none;
-            font-size: 1.2em; /* Küçültülmüş boyut */
-            font-weight: normal; /* Kalınlık kaldırıldı */
+            font-size: 1.2em;
+            letter-spacing: 1px;
         }
 
-        /* Menü Linkleri */
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            gap: 35px; /* Butonlar arası boşluk */
+        }
+
         nav ul li a {
             color: #f4f4f4; 
             text-decoration: none;
-            padding: 10px 5px; 
+            padding: 5px 0; 
             text-transform: uppercase;
             font-weight: bold;
+            font-size: 0.85em;
+            letter-spacing: 1.5px;
             transition: all 0.3s; 
-            display: block; 
         }
-        /* Menü Linkleri HOVER */
+
         nav ul li a:hover {
-            background-color: #333333; /* Antrasit gri */
-            color: #f4f4f4; 
-            text-shadow: none; 
+            color: #00ffff; 
+        }
+        
+        /* HAKKIMDA İÇERİĞİ - YUKARI TAŞIMA BURADA YAPILDI */
+        .about-content {
+            padding: 50px 20px 80px 20px; /* Üst boşluk 150px'den 50px'e indirildi */
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: left;
         }
 
-        /* Karşılama Ekranı (Hero Section) */
-        .hero-section {
-            height: 100vh; display: flex; justify-content: center; align-items: center; position: relative;
-            background-color: #000000; 
+        .about-content h2 {
+            text-align: center;
+            color: #00ffff;
+            margin-bottom: 40px;
+            font-size: 2.8em;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
         }
-        .hero-content h1 {
-            font-size: 2.5em; color: #ffffff; 
-            font-family: 'Playfair Display', serif; 
-        }
-        .hero-content p {
-            color: #ff0044; text-shadow: 0 0 7px #ff0044;
-        }
-        
-        /* ANA SAYFA BUTONLARI (Oval Köşeli: PROJECTS, ABOUT ME, CONTACT) */
-        .btn {
-            display: inline-block; 
-            padding: 10px 25px; /* Oval kalması için geniş padding */
-            margin: 10px;
-            text-decoration: none;
-            border: 2px solid #00ffff;
-            border-radius: 20px; /* OVAL KÖŞELER */
-            color: #00ffff;           
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 0 5px #00ffff;
-        }
-        .btn:hover {
-            background-color: #00ffff; 
-            color: #000000;
-            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-        }
-        
-        /* TÜM SECTİON ALANLARI (Proje/İletişim) */
-        section {
-            padding: 80px 20px;
-            background-color: #000000; /* Beyaz kalan alanları siyah yapar */
-            text-align: center; /* İçerik ortalanır */
-        }
-
-        /* İLETİŞİM İKONLARI (Tam Daire: LinkedIn, GitHub, E-posta) */
-        .contact-btn {
-            display: inline-flex; 
-            align-items: center; 
-            
-            padding: 10px 10px; /* Tam daire için eşit padding */
-            border-radius: 50%; /* TAM DAİRE ŞEKLİ */
-            
-            margin: 10px 5px;
-            text-decoration: none;
-            border: 2px solid #00ffff; 
-            color: #00ffff;           
-            transition: all 0.3s;
-            box-shadow: 0 0 5px #00ffff; 
-        }
-        .contact-btn:hover {
-            background-color: #00ffff; 
-            color: #000000;
-            box-shadow: 0 0 10px #00ffff;
-        }
-        
-        /* Hakkımda Bölümüne Özel Stiller */
-    .about-content {
-        padding: 150px 20px 80px 20px; 
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left; /* Ana içeriği sola yaslı tutar */
-    }
-    .about-content h2 {
-        text-align: center;
-        color: #00ffff;
-        margin-bottom: 30px;
-        font-size: 2.5em;
-    }
     
-    /* İki yana yaslama ayarları */
-    .about-content p, .about-content li {
-        line-height: 1.8; /* Satır aralığını artırır */
-        margin-bottom: 30px; /* Paragraf alt boşluğunu artırır */
-        color: #f4f4f4;
-        text-align: justify; /* METNİ İKİ YANA YASLAR */
-    }
+        .about-content p {
+            line-height: 1.9;
+            margin-bottom: 25px;
+            color: #ccc;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+
+        strong {
+            color: #00ffff; /* Önemli kelimeleri turkuaz yapar */
+            font-weight: bold;
+        }
+
+        /* Responsive ayar */
+        @media (max-width: 768px) {
+            nav { padding: 20px 5%; flex-direction: column; gap: 15px; }
+            .about-content { padding-top: 30px; }
+        }
     </style>
 </head>
 
@@ -173,21 +112,22 @@
     </nav>
     
     <section class="about-content">
-        <h2>About Me  </h2>
+        <h2>About Me</h2>
         
         <p>
-            Merhaba, ben Tuğçe Pınarbaş. 2021 yılında Makine Mühendisliği bölümünden mezun oldum. 
-            Mezun olduğumdan bu yana savunma sanayi alanında Mekanik Tasarım Mühendisi olarak yaklaşık 3 yıl çalıştım. 
-            Savunma sanayisinde edindiğim 3 yıllık teknik tasarım tecrübemi, oyun geliştirme alanına taşımaya karar verdim. 
-            Bu yolculuğa, Kodluyoruz ve Microsoft iş birliğiyle düzenlenen “Oyun Geliştirme Başlangıç Programı” ile başladım.
-            Eğitim sürecinde C# dilini kullanarak Unity ile ilk oyun tasarımımı gerçekleştirdim. Analitik düşünme, problem çözme ve yaratıcı
-            tasarım becerilerimi bir araya getirerek, oyun sektöründe profesyonel bir kariyer hedefliyorum.
-            Teknik yeteneklerimi yaratıcılıkla birleştirerek hem oynanışı zevkli hem de görsel estetiği yüksek oyunlar tasarlamak en büyük hedefim.    
-        
+            Merhaba, ben <strong>Tuğçe Pınarbaş</strong>. 2021 yılında <strong>Makine Mühendisliği</strong> bölümünden mezun oldum. 
+            Mezun olduğumdan bu yana savunma sanayi alanında <strong>Mekanik Tasarım Mühendisi</strong> olarak yaklaşık 3 yıl çalıştım. 
+            Bu süreçte edindiğim teknik tasarım disiplinini ve analitik bakış açısını, oyun geliştirme tutkumla birleştirmeye karar verdim.
+        </p>
+
+        <p>
+            Bu yeni yolculuğa, <strong>Kodluyoruz</strong> ve <strong>Microsoft</strong> iş birliğiyle düzenlenen “Oyun Geliştirme Başlangıç Programı” ile adım attım. 
+            Eğitim sürecinde <strong>C#</strong> dilini kullanarak <strong>Unity</strong> ile ilk oyun projelerimi hayata geçirdim. Problem çözme yeteneğimi ve yaratıcı tasarım becerilerimi harmanlayarak, oyun sektöründe profesyonel bir kariyer inşa etmeyi hedefliyorum.
         </p>
                     
         <p>
-            Yeni projelere ve işbirliklerine her zaman açığım. Yaratıcılığımı ve teknik bilgimi kullanarak ekibinize değer katmayı heyecanla bekliyorum.
+            Teknik yetkinliklerimi estetik bir görsellikle birleştirerek, oyuncular için hem mekanik hem de görsel açıdan tatmin edici deneyimler yaratmak en büyük önceliğim. 
+            Yeni projelere ve yaratıcı iş birliklerine her zaman açığım.
         </p>
         
     </section>
