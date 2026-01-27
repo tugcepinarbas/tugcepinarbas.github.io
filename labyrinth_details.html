@@ -3,108 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LABYRINTH 3D Detayları - Tuğçe Pınarbaş</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
+    <title>Labyrinth 3D - Proje Detayları</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        
-     p {
-            /* Metinleri İnce (Normal) yapar */
-            font-weight: normal;
-            /* Satır yüksekliğini 1.5 katına ayarlıyoruz (varsayılan genellikle 1.2'dir) */
-            line-height: 2; 
-            color: #ffffff; /* Metin rengi daha önceki adımlarda beyaz olarak ayarlanmıştı */
-        }
-        ul {
-            list-style-type: disc; /* Varsayılan dolu daire işaretini kullanırız */
-            padding-left: 20px; /* Soldan biraz boşluk bırakır */
-            margin-top: 5px; 
-            margin-bottom: 20px;
-        }
-
-        li {
-            color: #ffffff; /* Metin rengi beyaz */
-            font-weight: normal; /* İnce punto (Daha önceki p kuralından kalmış olabilir) */
-            line-height: 2; /* Satır aralığını biraz daha açıyoruz (deneyebilirsiniz) */
-        }
-        
         body {
-            background-color: #0a0a0a; /* Siyah arka plan */
-            font-family: Arial, sans-serif;
-            color: #ffffff; /* Beyaz metin */
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #0b0b0b;
+            color: white;
             text-align: center;
         }
 
-        h1, h2 {
-            color: #ffffff; /* YENİ: Başlık rengi BEYAZ */
+        /* Üst Bilgi Alanı (Örnekteki gibi rozetler) */
+        .header-tags {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        a {
-            color: #ffffff; /* YENİ: Başlık rengi BEYAZ */
+        .tag {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid #00ffff;
+            color: #00ffff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Oyun Alanı */
+        .game-container {
+            margin: 40px auto;
+            width: 80%;
+            max-width: 900px;
+            aspect-ratio: 16 / 9;
+            background: #1a1a1a;
+            border: 4px solid #333;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        .game-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .play-overlay {
+            position: absolute;
+            color: white;
             text-decoration: none;
-            transition: color 0.3s;
-        }
-        /* BAŞLIK VE ANA SAYFAYA DÖN LİNKİ İÇİN KAPSAYICI STİLİ */
-        .return-link-container {
-            position: fixed; /* Sayfanın kaydırılsa bile sabit kalmasını sağlar */
-            top: 0;          /* Sayfanın en üstüne yerleştirir */
-            left: 0;         /* Sayfanın en soluna yerleştirir */
-            padding: 20px;   /* Etrafına boşluk ekler */
-            width: 100%;     /* Genişliğini tüm sayfa yapar */
-            text-align: left; /* Metinleri sola hizalar */
-            z-index: 1000;   /* Diğer tüm elemanların üstünde görünmesini sağlar */
-            background-color: transparent; /* Arka planı şeffaf yapar */
-        }
-        
-        /* ANA SAYFAYA DÖN LİNKİNİN KENDİ STİLİ */
-        .return-link-container a {
-            font-size: 0.9em !important; /* Yazı boyutunu küçültür */
-            padding: 5px 10px;
-            border: 1px solid #00ffff; /* Zarif neon çerçeve */
-            border-radius: 5px;
-            transition: all 0.3s;
+            background: rgba(255, 0, 68, 0.8);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        .return-link-container a:hover {
-            background-color: #00ffff;
-            color: #0a0a0a !important;
+        .play-overlay:hover {
+            transform: scale(1.1);
+            background: #ff0044;
         }
+
+        /* İçerik Alanı */
+        .content {
+            max-width: 800px;
+            margin: 0 auto 100px;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        h1 { font-size: 3em; color: #00ffff; text-shadow: 0 0 10px #00ffff; margin-bottom: 10px; text-align: center; }
         
-        h2 {
-            /* Başlıkları Kalın (Bold) yapar */
-            font-weight: bold !important; 
-            color: #ffffff !important; /* Beyaz rengi koruyoruz */
+        .description {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #ccc;
+        }
+
+        .features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #161616;
+            padding: 15px;
+            border-left: 3px solid #ff0044;
+        }
+
+        /* Geri Dön Butonu */
+        .back-nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    
-  <div class="return-link-container">
-        <a href="index.html">&larr; Ana Sayfaya Dön</a>
+
+    <nav class="back-nav">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Geri Dön</a>
+    </nav>
+
+    <div class="header-tags">
+        <div class="tag"><i class="fas fa-check-circle"></i> Tamamlandı</div>
+        <div class="tag"><i class="fab fa-unity"></i> Unity</div>
+        <div class="tag"><i class="fas fa-code"></i> C# Programming</div>
+        <div class="tag"><i class="fas fa-cube"></i> 3D Environment Design</div>
     </div>
 
-    <header style="padding-top: 80px; text-align: center; color: #ffffff;">
-        <h1>LABYRINTH 3D</h1>
-    </header>
+    <h1>LABYRINTH 3D</h1>
 
-    <section id="project-details" style="padding: 20px 15%; text-align: left;">
+    <div class="game-container">
+        <img src="labyrinth.jpg" alt="Labyrinth Gameplay" class="game-placeholder">
         
-        <h2>Proje Özeti</h2>
-        
-        <ul>
-            <li>Unity ile geliştirdiğim 3D labirent oyunumun temeli; gerçekçi fizik kurallarına uygun karakter hareketleriyle ve oyun içi dinamikleri çözebilen sistemlerin üzerine kuruludur.</li>
-            <li>Çevre tasarımı, karakter tasarımı ve karakterin oyuna entegrasyonu tarafımca yapılmıştır.</li>
-            </ul>
-        
-        <h2>Teknik Detaylar</h2>
-        <ul>
-            <li>Projenin oluşturulmasında Unity oyun motoru kullanılmıştır.</li>
-            <li>Karakterin tasarımı, iskelet sistemi (rigging) ve animasyonu Blender programı ile yapılmıştır.</li>
-            <li>Oyunun yazılımı C# ile oluşturulmuştur.</li>
-        </ul>
-        
-        </section>
+        <a href="https://itch.io" target="_blank" class="play-overlay">
+            <i class="fas fa-play"></i> ITCH.IO ÜZERİNDEN OYNA
+        </a>
+    </div>
 
-    </body>
+    <div class="content">
+        <h2>Proje Hakkında</h2>
+        <p class="description">
+            Labyrinth 3D, oyuncunun karmaşık ve atmosferik bir labirent içerisinde yolunu bulmaya çalıştığı, gizem ve keşif odaklı bir 3D oyun deneyimidir. 
+            Bu projede Unity'nin ışıklandırma sistemleri ve C# ile geliştirilmiş özel karakter kontrol mekanikleri kullanılmıştır.
+        </p>
+
+        <div class="features">
+            <div class="feature-item">
+                <strong>Dinamik Işıklandırma:</strong> Karanlık koridorlarda gerçek zamanlı gölge ve ışık efektleri.
+            </div>
+            <div class="feature-item">
+                <strong>Seviye Tasarımı:</strong> Prosedürel veya el yapımı zorlayıcı labirent yapıları.
+            </div>
+            <div class="feature-item">
+                <strong>Ses Tasarımı:</strong> Atmosferi güçlendiren 3D spatial (uzamsal) sesler.
+            </div>
+            <div class="feature-item">
+                <strong>Optimizasyon:</strong> Düşük sistemlerde bile akıcı bir deneyim için optimize edilmiş modeller.
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
