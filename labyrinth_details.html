@@ -5,42 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Labyrinth 3D - Proje Detayları</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #0b0b0b;
             color: white;
             text-align: center;
         }
 
-        /* Üst Bilgi Alanı (Örnekteki gibi rozetler) */
-        .header-tags {
-            margin-top: 50px;
+        /* GERİ DÖN NAVİGASYONU */
+        .back-nav {
+            padding: 40px 0 10px 40px; 
+            text-align: left;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background: #00bcd4;
+            border-color: #00bcd4;
+            color: #000;
+        }
+
+        /* ANA KONTEYNER - Her Şeyi Ortalar */
+        .project-header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* ROZETLER - En Üstte ve Ortalı */
+        .badges-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
-        .tag {
-            background: rgba(0, 255, 255, 0.1);
-            border: 1px solid #00ffff;
-            color: #00ffff;
-            padding: 8px 15px;
+        .badge {
+            background-color: #00bcd4; /* Amy Elliott Turkuazı */
+            color: #ffffff;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.9em;
+            font-size: 0.85em;
+            font-weight: 500;
             display: flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Oyun Alanı */
+        .badge.demo {
+            background-color: #0097a7; /* Biraz daha koyu ton */
+        }
+
+        /* BAŞLIK - Rozetlerin Altında */
+        h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 3em; 
+            color: #00ffff; 
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3); 
+            margin: 0 0 30px 0; 
+        }
+
+        /* OYUN ALANI / GÖRSEL */
         .game-container {
-            margin: 40px auto;
-            width: 80%;
-            max-width: 600px;
+            width: 85%;
+            max-width: 900px;
             aspect-ratio: 16 / 9;
             background: #1a1a1a;
             border: 4px solid #333;
@@ -64,8 +111,8 @@
             position: absolute;
             color: white;
             text-decoration: none;
-            background: rgba(255, 0, 68, 0.8);
-            padding: 15px 30px;
+            background: rgba(255, 0, 68, 0.9);
+            padding: 15px 40px;
             border-radius: 30px;
             font-weight: bold;
             transition: 0.3s;
@@ -76,16 +123,16 @@
             background: #ff0044;
         }
 
-        /* İçerik Alanı */
+        /* İÇERİK ALANI */
         .content {
-            max-width: 800px;
-            margin: 0 auto 100px;
+            max-width: 900px;
+            margin: 50px auto 100px;
             text-align: left;
             padding: 0 20px;
         }
 
-        h1 { font-size: 3em; color: #00ffff; text-shadow: 0 0 10px #00ffff; margin-bottom: 10px; text-align: center; }
-        
+        h2 { color: #00bcd4; border-bottom: 1px solid #333; padding-bottom: 10px; }
+
         .description {
             line-height: 1.8;
             font-size: 1.1em;
@@ -101,100 +148,9 @@
 
         .feature-item {
             background: #161616;
-            padding: 15px;
-            border-left: 3px solid #ff0044;
+            padding: 20px;
+            border-left: 3px solid #00bcd4;
         }
-
-        /* Geri Dön Butonu */
-        .back-nav {
-            padding: 40px 20px 20px 40px;  
-            text-align: left;
-            
-        }
-
-        .back-btn {
-            color: #ffffff;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: 0.3s;
-            font-size: 0.9em;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-
-            .back-btn:hover {
-            background: #00bcd4;
-            border-color: #00bcd4;
-            color: #000;
-        }
-        /* DURUM KUTUCUĞU (STATUS BOX) */
-.project-status-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 40px;
-}
-
-.status-box {
-    background-color: #1a1a1a; /* Antrasit Arka Plan */
-    border: 1px solid #333;
-    padding: 8px 25px;
-    border-radius: 8px;
-    color: #ffcc00; /* Altın/Sarı tonu (Dikkat çekici ama göz yormaz) */
-    font-size: 0.85em;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.status-box i {
-    font-size: 1.1em;
-}
-
-/* ROZET KONTEYNERI - Tam Ortalar */
-.badges-container {
-    display: flex;
-    justify-content: center; /* Yatayda ortalar */
-    align-items: center;    /* Dikeyde hizalar */
-    gap: 12px;
-    margin: 30px auto;
-    flex-wrap: wrap;
-    max-width: 900px;
-}
-
-/* DOLGULU ROZETLER */
-.badge {
-    background-color: #00bcd4; /* turkuaz renk */
-    color: #ffffff;            /* Yazı ve ikon beyaz */
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border: none;             /* Çerçeveyi yok, dolgu odakta */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
-
-.badge:hover {
-    transform: translateY(-2px); /* Üzerine gelince hafif yükselme efekti */
-}
-
-.badge i {
-    font-size: 1em;
-}
-
-/* DEMO ROZETİ İÇİN ÖZEL RENK */
-.badge.demo {
-    background-color: #0097a7; /* koyu mavi */
-}
     </style>
 </head>
 <body>
@@ -203,31 +159,30 @@
         <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Geri Dön</a>
     </nav>
 
-    <div class="header-tags">
-        
-<div class="badges-container">
-    <div class="badge demo"><i class="fas fa-hammer"></i> DEMO</div>
-    <div class="badge"><i class="fab fa-unity"></i> Unity</div>
-    <div class="badge"><i class="fas fa-code"></i> Programming</div>
-    <div class="badge"><i class="fas fa-mountain"></i> Environment Design</div>
-    <div class="badge"><i class="fas fa-paint-brush"></i> Art</div>
-</div>
+    <div class="project-header-container">
+        <div class="badges-container">
+            <div class="badge demo"><i class="fas fa-hammer"></i> DEMO</div>
+            <div class="badge"><i class="fab fa-unity"></i> Unity</div>
+            <div class="badge"><i class="fas fa-code"></i> Programming</div>
+            <div class="badge"><i class="fas fa-mountain"></i> Environment Design</div>
+            <div class="badge"><i class="fas fa-paint-brush"></i> Art</div>
+        </div>
 
-<h1 style="text-align: center;">LABYRINTH 3D</h1>
+        <h1>LABYRINTH 3D</h1>
 
-    <div class="game-container">
-        <img src="labyrinth.jpg" alt="Labyrinth Gameplay" class="game-placeholder">
-        
-        <a href="https://itch.io" target="_blank" class="play-overlay">
-            <i class="fas fa-play"></i> Play
-        </a>
+        <div class="game-container">
+            <img src="labyrinth.jpg" alt="Labyrinth Gameplay" class="game-placeholder">
+            <a href="https://itch.io" target="_blank" class="play-overlay">
+                <i class="fas fa-play"></i> Play
+            </a>
+        </div>
     </div>
 
     <div class="content">
         <h2>Proje Hakkında</h2>
         <p class="description">
-            Labyrinth 3D, oyuncunun karmaşık ve atmosferik bir labirent içerisinde yolunu bulmaya çalıştığı, gizem ve keşif odaklı bir 3D oyun deneyimidir. 
-            Bu projede Unity'nin ışıklandırma sistemleri ve C# ile geliştirilmiş özel karakter kontrol mekanikleri kullanılmıştır.
+            Labyrinth 3D, oyuncunun karmaşık ve atmosferik bir labirent içerisinde yolunu bulmaya çalıştığı bir 3D oyun deneyimidir. 
+            Teknik demo aşamasında olan bu projede Unity'nin ışıklandırma sistemleri ve C# tabanlı karakter mekanikleri test edilmektedir.
         </p>
 
         <div class="features">
@@ -238,9 +193,8 @@
                 <strong>Seviye Tasarımı:</strong> El yapımı zorlayıcı labirent yapıları.
             </div>
             <div class="feature-item">
-                <strong>Ses Tasarımı:</strong> Henüz ses eklenmedi.
+                <strong>Geliştirme Notu:</strong> UI tasarımı ve sesler sonraki aşamalarda eklenecektir.
             </div>
-        
         </div>
     </div>
 
