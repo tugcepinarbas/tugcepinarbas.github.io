@@ -156,7 +156,7 @@
         }
 
         /* FOOTER & SOCIAL */
-        footer { padding: 50px 0; background: #111; margin-top: 50px; }
+        footer { padding: 50px 0; background: #111; margin-top: 0px; }
         .social-icons { margin-bottom: 20px; }
         .social-icons a {
             display: inline-block;
@@ -170,6 +170,12 @@
             text-decoration: none;
             transition: 0.3s;
         }
+        
+        footer p {
+             font-size: 0.75em !important; /* Normal metinden daha küçük yapar */
+             opacity: 0.6; /* Biraz daha soluklaştırarak arka plana iter */
+             letter-spacing: 0.5px;
+}
         .social-icons a:hover {
             background: #00ffff;
             color: #000;
@@ -198,7 +204,7 @@
             padding-bottom: 5px; /* Alt boşluğu iyice kıstık */
 }
         #contact h2 {
-            font-size: 1em !important; /* Rakamı küçülttük ve baskın hale getirdik */
+            font-size: 1.25em !important; /* Rakamı küçülttük ve baskın hale getirdik */
             margin-bottom: 10px !important;
 }
         
