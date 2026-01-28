@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Seed - Proje Detayları</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0b0b;
+            color: white;
+            text-align: center;
+        }
 
+        /* GERİ DÖN BUTONU */
+        .back-nav {
+            padding: 40px 0 10px 40px; 
+            text-align: left;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background: #00bcd4;
+            border-color: #00bcd4;
+            color: #000;
+        }
+
+        /* ANA KONTEYNER - Her Şeyi Ortalar */
+        .project-header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* ROZETLER - En Üstte ve Ortalı */
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: #00bcd4; /* Turkuaz */
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge.demo {
+            background-color: #0097a7; /* Biraz daha koyu ton */
+        }
+
+        /* BAŞLIK - Rozetlerin Altında */
+        h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em; 
+            color: #00ffff; 
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3); 
+            margin: 0 0 30px 0; 
+        }
+
+        /* OYUN ALANI / GÖRSEL */
+        .game-container {
+            width: 85%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            background: #1a1a1a;
+            border: 4px solid #333;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        .game-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .play-overlay {
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 0, 68, 0.9);
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .play-overlay:hover {
+            transform: scale(1.1);
+            background: #ff0044;
+        }
+        .game-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        /* İÇERİK ALANI */
+        .content {
+            max-width: 900px;
+            margin: 50px auto 100px;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        h2 { color: #00bcd4; border-bottom: 1px solid #333; padding-bottom: 10px; }
+
+        .description {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #ccc;
+        }
+
+        .features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #161616;
+            padding: 20px;
+            border-left: 3px solid #00bcd4;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Geri Dön</a>
+    </nav>
+
+    <div class="project-header-container">
+        <div class="badges-container">
+            <div class="badge demo"><i class="fas fa-hammer"></i> DEMO</div>
+            <div class="badge"><i class="fab fa-unity"></i> Unity</div>
+            <div class="badge"><i class="fas fa-code"></i> Programming</div>
+            <div class="badge"><i class="fas "></i> Environment Design</div>
+            <div class="badge"><i class="fas "></i> Character Design</div>
+        </div>
+
+        <h1>LAST SEED</h1>
+
+        <div class="game-container">
+            <img src="labyrinth.jpg" alt="Labyrinth Gameplay" class="game-placeholder">
+            <a href="https://tugcepinarbas.itch.io/labyrit?secret=8ld6LCSCnMMCedxiBpkl83bntM" target="_blank" class="play-overlay">
+                <i class="fas fa-play"></i> Play
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Proje Hakkında</h2>
+        <p class="description">
+            Last Seed, oyuncunun karmaşık bir labirent içerisinde yolunu bulmaya çalıştığı bir 2D oyundur. 
+            Teknik demo aşamasında olan bu projede Unity'nin ışıklandırma sistemleri ve karakter mekanikleri halen geliştirilmektedir.
+            Ayrıca karakter Blender programında tasarlanmıştır. 
+            Karakterin hareketlerinin bulunduğu kod C# dilinde oluşturulmuştur.
+        </p>
+
+        <div class="features">
+            <div class="feature-item">
+                <strong>Işıklandırma:</strong> Koridorlarda gerçek zamanlı ışık efektleri.
+            </div>
+            <div class="feature-item">
+                <strong>Seviye Tasarımı:</strong> El yapımı zorlayıcı labirent yapıları.
+            </div>
+            <div class="feature-item">
+                <strong>Geliştirme Notu:</strong> UI tasarımı ve sesler sonraki aşamalarda eklenecektir.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
