@@ -48,6 +48,23 @@
             margin-top: 20px;
         }
 
+        /* Başlık Stili: Yumuşak Renk ve Antrasit Gölge */
+       .project-title {
+           font-size: 3.5rem;          /* Yazı boyutu */
+           font-weight: bold;
+           color: #cbd5e0;             /* Yumuşak, grimsi açık bir renk (parlak beyaz değil) */
+           text-transform: uppercase;
+           margin: 20px 0;
+    
+    /* ANTRASİT GÖLGE EFEKTİ */
+    /* İlk gölge keskinlik, ikinci gölge yumuşak bir derinlik verir */
+           text-shadow: 
+           2px 2px 4px #2d3748,    /* Koyu Antrasit belirginlik */
+           0 0 15px rgba(45, 55, 72, 0.6); /* Yumuşak antrasit yayılma */
+    
+           letter-spacing: 2px;        /* Harf aralığı ile daha profesyonel duruş */
+        }
+
         /* ROZETLER - En Üstte ve Ortalı */
         .badges-container {
             display: flex;
@@ -173,7 +190,7 @@
             <div class="badge"><i class="fas "></i> Character Design</div>
         </div>
 
-        <h1>LAST SEED</h1>
+        <h1 class="project-title">Last Seed</h1>
 
         <div class="game-container">
             <img src="last_seed.JPG" alt="Last Seed Gameplay" class="game-placeholder">
@@ -186,10 +203,9 @@
     <div class="content">
         <h2>Proje Hakkında</h2>
         <p class="description">
-            Last Seed, oyuncunun karmaşık bir labirent içerisinde yolunu bulmaya çalıştığı bir 2D oyundur. 
-            Teknik demo aşamasında olan bu projede Unity'nin ışıklandırma sistemleri ve karakter mekanikleri halen geliştirilmektedir.
-            Ayrıca karakter Blender programında tasarlanmıştır. 
-            Karakterin hareketlerinin bulunduğu kod C# dilinde oluşturulmuştur.
+            Last Seed, ... 2D oyundur. 
+            Teknik demo aşamasında olan bu projenin karakter ve çevre tasarımı Unity'nin hem mekanik hem fizik araçları kullanılarak geliştirilmiştir.
+            Karakterin hareketlerinin yazılımı C# dili kullanarak oluşturulmuştur.
         </p>
 
         <div class="features">
